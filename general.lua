@@ -601,7 +601,7 @@ NOFLY()
           plr.Character:MoveTo(Vector3.new(1.3530871868134, 263.99990844727, -68.493690490723))
            elseif lol == ".skywars center" or lol == "/e skywars center" then
           plr.Character:MoveTo(Vector3.new(-9.1194448471069, 165.00018310547, 9.2147789001465))
-    elseif lol == ".tpup" or lol == "/e longjump watchdog" or lol == ".longjump wd" or lol == "/e longjump wd"then
+    elseif lol == ".tpup" or lol == "/e tpup" then
         if plr.Character then
                         plr.Character:MoveTo(Vector3.new(plr.Character.HumanoidRootPart.Position.X, plr.Character.HumanoidRootPart.Position.Y + 14, plr.Character.HumanoidRootPart.Position.Z))
 else
