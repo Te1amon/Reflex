@@ -582,6 +582,7 @@ TextButton_5.MouseButton1Click:Connect(function()
 	end
 end)
 
+oldgrav = workspace.Gravity
 plr.Chatted:Connect(function(lol)
     print("chatevent")
     if lol == ".fly" or lol == "/e fly" then
@@ -600,17 +601,24 @@ NOFLY()
           plr.Character:MoveTo(Vector3.new(1.3530871868134, 263.99990844727, -68.493690490723))
            elseif lol == ".skywars center" or lol == "/e skywars center" then
           plr.Character:MoveTo(Vector3.new(-9.1194448471069, 165.00018310547, 9.2147789001465))
-    elseif lol == ".longjump watchdog" or lol == "/e longjump watchdog" or lol == ".longjump wd" or lol == "/e longjump wd"then
+    elseif lol == ".tpup" or lol == "/e longjump watchdog" or lol == ".longjump wd" or lol == "/e longjump wd"then
         if plr.Character then
                         plr.Character:MoveTo(Vector3.new(plr.Character.HumanoidRootPart.Position.X, plr.Character.HumanoidRootPart.Position.Y + 14, plr.Character.HumanoidRootPart.Position.Z))
 else
             game.StarterGui:SetCore("SendNotification", {Title="Reflex"; Text="plr.Character is nil"; Duration=3;})
         end
+			 elseif lol == ".longjump Gravity" or lol == "/e longjump Gravity" or lol == ".longjump" or lol == "/e longjump"then
+     workspace.Gravity = 50
+			 elseif lol == ".unlongjump" or lol == "/e unlongjump" then
+     workspace.Gravity = oldgrav
     elseif lol == ".cmds" or lol == "/e cmds" then
         	game:GetService("StarterGui"):SetCore("ChatMakeSystemMessage", {
 		Text =[[
 		REFLEX ADMIN CMDS:
-		.longjump (watchdog, wd) - Normal mode coming soon
+		You can also use "/e command" if you would like
+		.longjump (Modes: Gravity) - LongJump
+		.unlongjump - UnLongJump
+		.tpup - Teleports you up in the air
 		.fly - allows you to fly
 		.unfly - makes you stop flying
 		.skywars megavip - teleports you to vip section
@@ -647,7 +655,7 @@ while wait() do
 	if antivelocitytoggled then
 		if plr.Character then
 			for i,v in pairs(plr.Character:GetDescendants()) do
-				if v:IsA("BodyVelocity") or v:IsA("BodyGyro") or v:IsA("RocketPropulsion") or v:IsA("BodyThrust") or v:IsA("BodyAngularVelocity") or v:IsA("AngularVelocity") or v:IsA("BodyForce") or v:IsA("VectorForce") or v:IsA("LineForce") then
+				if v:IsA("BodyVelocity") or v:IsA("BodyGyro") or v:IsA("RocketPropulsion") or v:IsA("BodyThrust") or v:IsA("BodyAngularVelocity") or v:IsA("AngularVelocity") or v:IsA("BodyForce") then
 					v:Destroy()
 				end
 			end
