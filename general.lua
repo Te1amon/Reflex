@@ -320,7 +320,6 @@ end)
 
 skywarsdisabler = false
 TextButton_10.MouseButton1Click:Connect(function()
-		--[[
 	if game.PlaceId == 5163196050 then
 		game:GetService("Players").LocalPlayer.PlayerScripts["hacker-detector"].grfdsfm:Destroy()
 		workspace.ACBanHandler.Self:Destroy()
@@ -329,7 +328,6 @@ TextButton_10.MouseButton1Click:Connect(function()
 	    	game:GetService("Players").LocalPlayer.PlayerScripts.antiantinac:Destroy()
 		workspace.AC.kick:Destroy()
 		workspace.AC.ban:Destroy()
-			]]
 			if game.PlaceId == 855499080 then
 	    	skywarsdisabler = true
 		game.StarterGui:SetCore("SendNotification", {Title="Reflex"; Text="Anti-cheat has been disabled!"; Duration=3;})
