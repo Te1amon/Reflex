@@ -1,4 +1,4 @@
-plr = game:GetService("Players").LocalPlayer
+plr = game:GetService("Players").LocalPlayer -- b
 function ReturnString() -- Returns a random string
 	local length = math.random(10,20)
 	local array = {}
