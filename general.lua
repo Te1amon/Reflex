@@ -307,9 +307,11 @@ TextButton_11.TextScaled = true
 TextButton_11.TextSize = 14.000
 TextButton_11.TextWrapped = true
 
+pogtop = false
 mouse.KeyDown:Connect(function(key)
 if key == "=" then
 TopThing.Visible = not TopThing.Visible
+game.StarterGui:SetCore("SendNotification", {Title="Reflex"; Text="Toggled Visibility"; Duration=2;})
 else
 end
 
