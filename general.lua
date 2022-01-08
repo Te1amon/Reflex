@@ -328,7 +328,7 @@ TextButton_10.MouseButton1Click:Connect(function()
 	    	game:GetService("Players").LocalPlayer.PlayerScripts.antiantinac:Destroy()
 		workspace.AC.kick:Destroy()
 		workspace.AC.ban:Destroy()
-			if game.PlaceId == 855499080 then
+			elseif game.PlaceId == 855499080 then
 	    	skywarsdisabler = true
 		game.StarterGui:SetCore("SendNotification", {Title="Reflex"; Text="Anti-cheat has been disabled!"; Duration=3;})
 			elseif workspace.Watchdog then
