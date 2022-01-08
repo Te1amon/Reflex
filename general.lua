@@ -1,4 +1,6 @@
-plr = game:GetService("Players").LocalPlayer -- b
+plr = game:GetService("Players").LocalPlayer
+mouse = plr:GetMouse()
+
 function ReturnString() -- Returns a random string
 	local length = math.random(10,20)
 	local array = {}
@@ -304,6 +306,12 @@ TextButton_11.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextButton_11.TextScaled = true
 TextButton_11.TextSize = 14.000
 TextButton_11.TextWrapped = true
+
+mouse.KeyDown:Connect(function(key)
+if key == "=" then
+TopThing.Visible = not TopThing.Visible
+else
+end
 
 game.StarterGui:SetCore("SendNotification", {Title="Reflex"; Text="Thank you for using Reflex!"; Duration=3;})
 if syn then
