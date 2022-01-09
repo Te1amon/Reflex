@@ -323,6 +323,7 @@ elseif Noobsploit_Loaded then
 else
 	-- no
 end
+end)
 
 TextButton_11.MouseButton1Click:Connect(function()
 	ScreenGui:Destroy()
