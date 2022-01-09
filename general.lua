@@ -314,6 +314,7 @@ TopThing.Visible = not TopThing.Visible
 game.StarterGui:SetCore("SendNotification", {Title="Reflex"; Text="Toggled Visibility"; Duration=2;})
 else
 end
+		end)
 
 game.StarterGui:SetCore("SendNotification", {Title="Reflex"; Text="Thank you for using Reflex!"; Duration=3;})
 if syn then
@@ -323,7 +324,6 @@ elseif Noobsploit_Loaded then
 else
 	-- no
 end
-end)
 
 TextButton_11.MouseButton1Click:Connect(function()
 	ScreenGui:Destroy()
