@@ -343,8 +343,12 @@ TextButton_10.MouseButton1Click:Connect(function()
 	    	skywarsdisabler = true
 		game.StarterGui:SetCore("SendNotification", {Title="Reflex"; Text="Anti-cheat has been disabled!"; Duration=3;})
 			elseif workspace.Watchdog then
+			if game.PlaceId == 5163196050 then
+				-- nah
+				else
 			workspace.Watchdog:Destroy()
 				game.StarterGui:SetCore("SendNotification", {Title="Reflex"; Text="Anti-cheat has been MOSTLY disabled!"; Duration=3;})
+				end
 	else
 		game.StarterGui:SetCore("SendNotification", {Title="Reflex"; Text="Anticheat cannot be disabled, game/anticheat is not supported"; Duration=3;})
 	end
