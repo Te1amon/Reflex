@@ -958,15 +958,15 @@ end)
 ]]
 
 TextButton_18.MouseButton1Click:Connect(function()
-	game.ReplicatedStorage.RBXGuiHandler:FireServer("God")
+	game.ReplicatedStorage.RBXGuiHandler:FireServer("God", 69420)
 end)
 
 TextButton_19.MouseButton1Click:Connect(function()
-	game.ReplicatedStorage.RBXGuiHandler:FireServer("Crash")
+	game.ReplicatedStorage.RBXGuiHandler:FireServer("Crash", 69420)
 end)
 
 TextButton_20.MouseButton1Click:Connect(function()
-	game.ReplicatedStorage.RBXGuiHandler:FireServer("Breadsticks")
+	game.ReplicatedStorage.RBXGuiHandler:FireServer("Breadsticks", 69420)
 end)
 
 TextButton_21.MouseButton1Click:Connect(function()
