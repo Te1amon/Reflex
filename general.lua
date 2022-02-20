@@ -1,5 +1,5 @@
 -- made by Webmario, took a long time to make
--- pls give credit to me if u showcase or use my code
+-- pls give credit to me if u showcase or use (skid) my code
 
 --[[
 Credits:
@@ -59,6 +59,8 @@ local Skywars = Instance.new("Frame")
 local Framey_8 = Instance.new("Frame")
 local TextButton_22 = Instance.new("TextButton")
 local TextLabel_10 = Instance.new("TextLabel")
+local allweapons = Instance.new("TextButton")
+
 
 function randomString()
 	local length = math.random(10,20)
@@ -87,10 +89,6 @@ Framey.BackgroundTransparency = 0.100
 Framey.BorderSizePixel = 0
 Framey.Position = UDim2.new(-0.000213107545, 0, 0.987113953, 0)
 Framey.Size = UDim2.new(0, 148, 0, 268)
-Movement.Draggable = true
-Movement.Selectable = true
-Framey.Draggable = true
-Framey.Selectable = true
 
 TextButton.Parent = Framey
 TextButton.BackgroundColor3 = Color3.fromRGB(101, 99, 156)
@@ -190,7 +188,6 @@ SFOTH.BorderSizePixel = 0
 SFOTH.Position = UDim2.new(0.225839272, 0, 0.0183639396, 0)
 SFOTH.Size = UDim2.new(0, 148, 0, 32)
 SFOTH.Visible = false
-SFOTH.Draggable = true
 
 Framey_2.Name = "Framey"
 Framey_2.Parent = SFOTH
@@ -199,8 +196,6 @@ Framey_2.BackgroundTransparency = 0.100
 Framey_2.BorderSizePixel = 0
 Framey_2.Position = UDim2.new(-0.000213107545, 0, 0.987113953, 0)
 Framey_2.Size = UDim2.new(0, 148, 0, 268)
-Framey_2.Draggable = true
-Framey_2.Selectable = true
 
 reachbox.Name = "reachbox"
 reachbox.Parent = Framey_2
@@ -248,7 +243,7 @@ TextLabel_2.BorderSizePixel = 0
 TextLabel_2.Position = UDim2.new(-0.0202702694, 0, 0, 0)
 TextLabel_2.Size = UDim2.new(0, 151, 0, 32)
 TextLabel_2.Font = Enum.Font.Cartoon
-TextLabel_2.Text = "SFOTH"
+TextLabel_2.Text = "Game Specific"
 TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_2.TextScaled = true
 TextLabel_2.TextSize = 14.000
@@ -260,19 +255,14 @@ PrisonLife.BackgroundColor3 = Color3.fromRGB(43, 43, 81)
 PrisonLife.BorderSizePixel = 0
 PrisonLife.Position = UDim2.new(0.223804682, 0, 0.0166944899, 0)
 PrisonLife.Size = UDim2.new(0, 148, 0, 32)
-PrisonLife.Visible = false
-PrisonLife.Draggable = true
-PrisonLife.Selectable = true
 
 Framey_3.Name = "Framey"
 Framey_3.Parent = PrisonLife
 Framey_3.BackgroundColor3 = Color3.fromRGB(73, 73, 138)
 Framey_3.BackgroundTransparency = 0.100
 Framey_3.BorderSizePixel = 0
-Framey_3.Position = UDim2.new(-0.000213107545, 0, 0.987113953, 0)
-Framey_3.Size = UDim2.new(0, 148, 0, 268)
-Framey_3.Draggable = true
-Framey_3.Selectable = true
+Framey_3.Position = UDim2.new(-0.000213210646, 0, 0.987113953, 0)
+Framey_3.Size = UDim2.new(0, 148, 0, 300)
 
 TextButton_7.Parent = Framey_3
 TextButton_7.BackgroundColor3 = Color3.fromRGB(101, 99, 156)
@@ -289,7 +279,7 @@ TextButton_7.TextWrapped = true
 TextButton_8.Parent = Framey_3
 TextButton_8.BackgroundColor3 = Color3.fromRGB(101, 99, 156)
 TextButton_8.BorderSizePixel = 0
-TextButton_8.Position = UDim2.new(0, 0, 0.267531157, 0)
+TextButton_8.Position = UDim2.new(0, 0, 0.258322507, 0)
 TextButton_8.Size = UDim2.new(0, 148, 0, 28)
 TextButton_8.Font = Enum.Font.Cartoon
 TextButton_8.Text = "Prisoners Team"
@@ -301,7 +291,7 @@ TextButton_8.TextWrapped = true
 TextButton_9.Parent = Framey_3
 TextButton_9.BackgroundColor3 = Color3.fromRGB(101, 99, 156)
 TextButton_9.BorderSizePixel = 0
-TextButton_9.Position = UDim2.new(0, 0, 0.133202821, 0)
+TextButton_9.Position = UDim2.new(0, 0, 0.116008572, 0)
 TextButton_9.Size = UDim2.new(0, 148, 0, 28)
 TextButton_9.Font = Enum.Font.Cartoon
 TextButton_9.Text = "Gray (Neutral) Team"
@@ -313,7 +303,7 @@ TextButton_9.TextWrapped = true
 TextButton_10.Parent = Framey_3
 TextButton_10.BackgroundColor3 = Color3.fromRGB(101, 99, 156)
 TextButton_10.BorderSizePixel = 0
-TextButton_10.Position = UDim2.new(0, 0, 0.394396842, 0)
+TextButton_10.Position = UDim2.new(0, 0, 0.375188202, 0)
 TextButton_10.Size = UDim2.new(0, 148, 0, 28)
 TextButton_10.Font = Enum.Font.Cartoon
 TextButton_10.Text = "Criminals Team"
@@ -325,7 +315,7 @@ TextButton_10.TextWrapped = true
 TextButton_11.Parent = Framey_3
 TextButton_11.BackgroundColor3 = Color3.fromRGB(101, 99, 156)
 TextButton_11.BorderSizePixel = 0
-TextButton_11.Position = UDim2.new(0, 0, 0.577232659, 0)
+TextButton_11.Position = UDim2.new(0, 0, 0.515649915, 0)
 TextButton_11.Size = UDim2.new(0, 148, 0, 28)
 TextButton_11.Font = Enum.Font.Cartoon
 TextButton_11.Text = "Cube (FE)"
@@ -337,7 +327,7 @@ TextButton_11.TextWrapped = true
 TextButton_12.Parent = Framey_3
 TextButton_12.BackgroundColor3 = Color3.fromRGB(101, 99, 156)
 TextButton_12.BorderSizePixel = 0
-TextButton_12.Position = UDim2.new(0, 0, 0.704098344, 0)
+TextButton_12.Position = UDim2.new(0, 0, 0.628654659, 0)
 TextButton_12.Size = UDim2.new(0, 148, 0, 28)
 TextButton_12.Font = Enum.Font.Cartoon
 TextButton_12.Text = "Killaura"
@@ -349,7 +339,7 @@ TextButton_12.TextWrapped = true
 TextButton_13.Parent = Framey_3
 TextButton_13.BackgroundColor3 = Color3.fromRGB(101, 99, 156)
 TextButton_13.BorderSizePixel = 0
-TextButton_13.Position = UDim2.new(0, 0, 0.830964029, 0)
+TextButton_13.Position = UDim2.new(0, 0, 0.748853683, 0)
 TextButton_13.Size = UDim2.new(0, 148, 0, 28)
 TextButton_13.Font = Enum.Font.Cartoon
 TextButton_13.Text = "Instant Respawn"
@@ -365,7 +355,7 @@ TextLabel_3.BorderSizePixel = 0
 TextLabel_3.Position = UDim2.new(-0.0202702694, 0, 0, 0)
 TextLabel_3.Size = UDim2.new(0, 151, 0, 32)
 TextLabel_3.Font = Enum.Font.Cartoon
-TextLabel_3.Text = "Prison Life"
+TextLabel_3.Text = "Game Specific"
 TextLabel_3.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_3.TextScaled = true
 TextLabel_3.TextSize = 14.000
@@ -377,8 +367,7 @@ Arsenal.BackgroundColor3 = Color3.fromRGB(43, 43, 81)
 Arsenal.BorderSizePixel = 0
 Arsenal.Position = UDim2.new(0.223804682, 0, 0.0166944899, 0)
 Arsenal.Size = UDim2.new(0, 148, 0, 32)
-Arsenal.Draggable = true
-Arsenal.Selectable = true
+Arsenal.Visible = false
 
 Framey_4.Name = "Framey"
 Framey_4.Parent = Arsenal
@@ -387,8 +376,6 @@ Framey_4.BackgroundTransparency = 0.100
 Framey_4.BorderSizePixel = 0
 Framey_4.Position = UDim2.new(-0.000213107545, 0, 0.987113953, 0)
 Framey_4.Size = UDim2.new(0, 148, 0, 268)
-Framey_4.Draggable = true
-Framey_4.Selectable = true
 
 TextButton_14.Parent = Framey_4
 TextButton_14.BackgroundColor3 = Color3.fromRGB(101, 99, 156)
@@ -422,7 +409,7 @@ TextLabel_5.BorderSizePixel = 0
 TextLabel_5.Position = UDim2.new(-0.0202702694, 0, 0, 0)
 TextLabel_5.Size = UDim2.new(0, 151, 0, 32)
 TextLabel_5.Font = Enum.Font.Cartoon
-TextLabel_5.Text = "Arsenal"
+TextLabel_5.Text = "Game Specific"
 TextLabel_5.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_5.TextScaled = true
 TextLabel_5.TextSize = 14.000
@@ -434,8 +421,6 @@ Visual.BackgroundColor3 = Color3.fromRGB(43, 43, 81)
 Visual.BorderSizePixel = 0
 Visual.Position = UDim2.new(0.414038658, 0, 0.0183639396, 0)
 Visual.Size = UDim2.new(0, 148, 0, 32)
-Visual.Draggable = true
-Visual.Selectable = true
 
 Framey_5.Name = "Framey"
 Framey_5.Parent = Visual
@@ -444,8 +429,6 @@ Framey_5.BackgroundTransparency = 0.100
 Framey_5.BorderSizePixel = 0
 Framey_5.Position = UDim2.new(-0.000213107545, 0, 0.987113953, 0)
 Framey_5.Size = UDim2.new(0, 148, 0, 268)
-Framey_5.Draggable = true
-Framey_5.Selectable = true
 
 TextButton_15.Parent = Framey_5
 TextButton_15.BackgroundColor3 = Color3.fromRGB(101, 99, 156)
@@ -502,9 +485,7 @@ SS.BackgroundColor3 = Color3.fromRGB(43, 43, 81)
 SS.BorderSizePixel = 0
 SS.Position = UDim2.new(0.610376418, 0, 0.0183639396, 0)
 SS.Size = UDim2.new(0, 148, 0, 32)
-SS.Visible = true
-SS.Draggable = true
-SS.Selectable = true
+SS.Visible = false
 
 Framey_6.Name = "Framey"
 Framey_6.Parent = SS
@@ -513,8 +494,6 @@ Framey_6.BackgroundTransparency = 0.100
 Framey_6.BorderSizePixel = 0
 Framey_6.Position = UDim2.new(-0.000213107545, 0, 0.987113953, 0)
 Framey_6.Size = UDim2.new(0, 148, 0, 268)
-Framey_6.Draggable = true
-Framey_6.Selectable = true
 
 TextButton_18.Parent = Framey_6
 TextButton_18.BackgroundColor3 = Color3.fromRGB(101, 99, 156)
@@ -583,9 +562,6 @@ SS_unsupported.BackgroundColor3 = Color3.fromRGB(43, 43, 81)
 SS_unsupported.BorderSizePixel = 0
 SS_unsupported.Position = UDim2.new(0.610376418, 0, 0.0183639396, 0)
 SS_unsupported.Size = UDim2.new(0, 148, 0, 32)
-SS_unsupported.Visible = false
-SS_unsupported.Draggable = true
-SS_unsupported.Selectable = true
 
 Framey_7.Name = "Framey"
 Framey_7.Parent = SS_unsupported
@@ -628,9 +604,6 @@ Skywars.BorderSizePixel = 0
 Skywars.Position = UDim2.new(0.225839272, 0, 0.0183639396, 0)
 Skywars.Size = UDim2.new(0, 148, 0, 32)
 Skywars.Visible = false
-Skywars.Draggable = true
-Skywars.Selectable = true
-
 
 Framey_8.Name = "Framey"
 Framey_8.Parent = Skywars
@@ -659,11 +632,26 @@ TextLabel_10.BorderSizePixel = 0
 TextLabel_10.Position = UDim2.new(-0.0202702694, 0, 0, 0)
 TextLabel_10.Size = UDim2.new(0, 151, 0, 32)
 TextLabel_10.Font = Enum.Font.Cartoon
-TextLabel_10.Text = "Skywars"
+TextLabel_10.Text = "Game Specific"
 TextLabel_10.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_10.TextScaled = true
 TextLabel_10.TextSize = 14.000
 TextLabel_10.TextWrapped = true
+
+--print("most gui")
+allweapons.Parent = Framey_3
+allweapons.BackgroundColor3 = Color3.fromRGB(101, 99, 156)
+allweapons.BorderSizePixel = 0
+allweapons.Position = UDim2.new(0, 0, 0.868853688, 0)
+allweapons.Size = UDim2.new(0, 148, 0, 28)
+allweapons.Font = Enum.Font.Cartoon
+allweapons.Text = "Give All Weapons"
+allweapons.TextColor3 = Color3.fromRGB(255, 255, 255)
+allweapons.TextScaled = true
+allweapons.TextSize = 14.000
+allweapons.TextWrapped = true
+
+--print("got past gui variables")
 
 -- define other values
 coolaid = 158118263
@@ -945,7 +933,22 @@ TextButton_15.MouseButton1Click:Connect(function()
 
 			end
 		end
+		wait()
+				for i,v in pairs(workspace:GetDescendants()) do
+			if v.Name == "pogpog" or v.Name == "chamcham" then
+				v:Destroy()
+			else
+
+			end
+		end
 	else
+	    		for i,v in pairs(workspace:GetDescendants()) do
+			if v.Name == "pogpog" or v.Name == "chamcham" then
+				v:Destroy()
+			else
+
+			end
+		end
 		esp = true
 	end
 end)
@@ -1039,16 +1042,26 @@ mouse.KeyDown:Connect(function(lol)
 	end
 end)
 
-while wait() do
-	if killaura then
+allweapons.MouseButton1Click:Connect(function()
+            for i,v in pairs(workspace.Prison_ITEMS.giver:GetChildren()) do
+            workspace.Remote.ItemHandler:InvokeServer(v.ITEMPICKUP)
+        end
+    end)
+
+    game:GetService("RunService").RenderStepped:Connect(function()
+    wait()
+       	if killaura then
 		for i,v in pairs(game.Players:GetChildren()) do
-			wait(.1)
+			wait()
 			if v~=game.Players.LocalPlayer then
 				game.ReplicatedStorage.meleeEvent:FireServer(v)
 			else
 			end
 		end
 	end
+    end)
+    
+while wait() do
 	if esp then
 		wait(.1)
 		for i,v in pairs (game:GetService("Players"):GetPlayers()) do
