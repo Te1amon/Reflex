@@ -836,8 +836,8 @@ TextButton_4.MouseButton1Click:Connect(function()
 end)
 
 TextButton_5.MouseButton1Click:Connect(function()
-	if game.Players.LocalPlayer.Character:FindFirstChild("ClassicSword") then
-		v = game.Players.LocalPlayer.Character:FindFirstChild("ClassicSword")
+	if game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool") then
+		v = game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool")
 		local a = Instance.new("SelectionBox")
 		a.Name = "SelectionBoxCreated"
 		a.Parent = v.Handle
