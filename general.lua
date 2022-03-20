@@ -1125,7 +1125,7 @@ AimPart = "Random"
 	local Mouse = LocalPlayer:GetMouse()
 	function ClosestPlayer()
 		local MaxDist, Closest = math.huge
-		for i,v in pairs(Players.GetPlayers(Players)) do
+		for i,v in pairs(Players:GetChildren()) do
 			if v ~= LocalPlayer and v.Character then
 				local Head = v.Character.FindFirstChild(v.Character, "Head")
 				if Head then 
@@ -1152,7 +1152,7 @@ AimPart = "Random"
 			return 'LowerTorso'
 		end
 		if AimPart == 'Random' then
-			if math.random(1,4) == 1 then
+			if math.random(1,3) == 1 then
 				return 'Head'
 			else
 				return 'LowerTorso'
