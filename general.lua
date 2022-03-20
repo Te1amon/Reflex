@@ -1109,72 +1109,68 @@ end)
 
 akillaura = false
 silentaimboot_2.MouseButton1Click:Connect(function()
-		--[[
 	akillaura = not akillaura
-		]]
 end)
 
 whizzy = false
 whizzall.MouseButton1Click:Connect(function()
 	whizzy = not whizzy
 end)
-_G.SilentBim = false
-_G.AimPart = "Random"
-
-local CurrentCamera = workspace.CurrentCamera
-local Players = game:GetService("Players")
-local LocalPlayer = Players.LocalPlayer
-local Mouse = LocalPlayer:GetMouse()
-function ClosestPlayer()
-	local MaxDist, Closest = math.huge
-	for i,v in pairs(Players.GetPlayers(Players)) do
-		if v ~= LocalPlayer and v.Character then
-			local Head = v.Character.FindFirstChild(v.Character, "Head")
-			if Head then 
-				local Pos, Vis = CurrentCamera.WorldToScreenPoint(CurrentCamera, Head.Position)
-				if Vis then
-					local MousePos, TheirPos = Vector2.new(Mouse.X, Mouse.Y), Vector2.new(Pos.X, Pos.Y)
-					local Dist = (TheirPos - MousePos).Magnitude
-					if Dist < MaxDist then
-						MaxDist = Dist
-						Closest = v
+SilentAim = false
+AimPart = "Random"
+ 
+	local CurrentCamera = workspace.CurrentCamera
+	local Players = game:GetService("Players")
+	local LocalPlayer = Players.LocalPlayer
+	local Mouse = LocalPlayer:GetMouse()
+	function ClosestPlayer()
+		local MaxDist, Closest = math.huge
+		for i,v in pairs(Players.GetPlayers(Players)) do
+			if v ~= LocalPlayer and v.Character then
+				local Head = v.Character.FindFirstChild(v.Character, "Head")
+				if Head then 
+					local Pos, Vis = CurrentCamera.WorldToScreenPoint(CurrentCamera, Head.Position)
+					if Vis then
+						local MousePos, TheirPos = Vector2.new(Mouse.X, Mouse.Y), Vector2.new(Pos.X, Pos.Y)
+						local Dist = (TheirPos - MousePos).Magnitude
+						if Dist < MaxDist then
+							MaxDist = Dist
+							Closest = v
+						end
 					end
 				end
 			end
 		end
+		return Closest
 	end
-	return Closest
-end
-
-function GetAimPart()
-	if _G.AimPart == 'Head' then
-		return 'Head'
-	end
-	if _G.AimPart == 'LowerTorso' then
-		return 'LowerTorso'
-	end
-	if _G.AimPart == 'Random' then
-		if math.random(1,4) == 1 then
+ 
+	function GetAimPart()
+		if AimPart == 'Head' then
 			return 'Head'
-		else
+		end
+		if AimPart == 'LowerTorso' then
 			return 'LowerTorso'
 		end
+		if AimPart == 'Random' then
+			if math.random(1,4) == 1 then
+				return 'Head'
+			else
+				return 'LowerTorso'
+			end
+		end
 	end
-end
-
-namecallold = nil
-SilentBim = false
-
-if syn then
+ 
 	silentaimboot.MouseButton1Click:Connect(function()
-		if SilentBim then
-			SilentBim = false
+		if SilentAim then
+			--issilentaim.BackgroundColor3 = Color3.new(255, 0, 0)
+			SilentAim = false
 			local mt = getrawmetatable(game)
 			local index = mt.__index
 			setreadonly(mt, false)
 			mt.__namecall = namecallold
 		else
-			SilentBim = true
+			--issilentaim.BackgroundColor3 = Color3.new(0, 255, 0)
+			SilentAim = true
 			local mt = getrawmetatable(game)
 			local index = mt.__index
 			setreadonly(mt, false)
@@ -1192,9 +1188,6 @@ if syn then
 			end)
 		end
 	end)
-else
-	silentaimboot.Visible = false
-end
 
 
 
