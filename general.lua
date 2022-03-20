@@ -1109,7 +1109,9 @@ end)
 
 akillaura = false
 silentaimboot_2.MouseButton1Click:Connect(function()
+		--[[
 	akillaura = not akillaura
+		]]
 end)
 
 whizzy = false
@@ -1163,7 +1165,7 @@ end
 namecallold = nil
 SilentBim = false
 
-if getrawmetatable and setreadonly and newcclosure and getnamecallmethod and mt then -- check if silent aimbot is supported
+if syn then
 	silentaimboot.MouseButton1Click:Connect(function()
 		if SilentBim then
 			SilentBim = false
