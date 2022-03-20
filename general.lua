@@ -60,6 +60,12 @@ local Framey_8 = Instance.new("Frame")
 local TextButton_22 = Instance.new("TextButton")
 local TextLabel_10 = Instance.new("TextLabel")
 local allweapons = Instance.new("TextButton")
+local triggerboot = Instance.new("TextButton")
+local silentaimboot = Instance.new("TextButton")
+local nohead = Instance.new("TextButton")
+local coolify = Instance.new("TextButton")
+local whizzall = Instance.new("TextButton")
+local silentaimboot_2 = Instance.new("TextButton")
 
 
 function randomString()
@@ -389,6 +395,7 @@ TextButton_14.TextScaled = true
 TextButton_14.TextSize = 14.000
 TextButton_14.TextWrapped = true
 
+--[[
 TextLabel_4.Parent = Framey_4
 TextLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_4.BackgroundTransparency = 1.000
@@ -401,6 +408,7 @@ TextLabel_4.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_4.TextScaled = true
 TextLabel_4.TextSize = 14.000
 TextLabel_4.TextWrapped = true
+]]
 
 TextLabel_5.Parent = Arsenal
 TextLabel_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -650,6 +658,85 @@ allweapons.TextColor3 = Color3.fromRGB(255, 255, 255)
 allweapons.TextScaled = true
 allweapons.TextSize = 14.000
 allweapons.TextWrapped = true
+
+triggerboot.Name = "triggerboot"
+triggerboot.Parent = Framey_4
+triggerboot.BackgroundColor3 = Color3.fromRGB(101, 99, 156)
+triggerboot.BorderSizePixel = 0
+triggerboot.Position = UDim2.new(0, 0, 0.0100684762, 0)
+triggerboot.Size = UDim2.new(0, 148, 0, 28)
+triggerboot.Font = Enum.Font.Cartoon
+triggerboot.Text = "Triggerbot"
+triggerboot.TextColor3 = Color3.fromRGB(255, 255, 255)
+triggerboot.TextScaled = true
+triggerboot.TextSize = 14.000
+triggerboot.TextWrapped = true
+
+silentaimboot.Name = "silentaimboot"
+silentaimboot.Parent = Framey_4
+silentaimboot.BackgroundColor3 = Color3.fromRGB(101, 99, 156)
+silentaimboot.BorderSizePixel = 0
+silentaimboot.Position = UDim2.new(0, 0, 0.133202806, 0)
+silentaimboot.Size = UDim2.new(0, 148, 0, 28)
+silentaimboot.Font = Enum.Font.Cartoon
+silentaimboot.Text = "Silent Aimbot"
+silentaimboot.TextColor3 = Color3.fromRGB(255, 255, 255)
+silentaimboot.TextScaled = true
+silentaimboot.TextSize = 14.000
+silentaimboot.TextWrapped = true
+
+nohead.Name = "nohead"
+nohead.Parent = Framey_4
+nohead.BackgroundColor3 = Color3.fromRGB(101, 99, 156)
+nohead.BorderSizePixel = 0
+nohead.Position = UDim2.new(0, 0, 0.420516253, 0)
+nohead.Size = UDim2.new(0, 148, 0, 28)
+nohead.Font = Enum.Font.Cartoon
+nohead.Text = "No Head"
+nohead.TextColor3 = Color3.fromRGB(255, 255, 255)
+nohead.TextScaled = true
+nohead.TextSize = 14.000
+nohead.TextWrapped = true
+
+coolify.Name = "coolify"
+coolify.Parent = Framey_4
+coolify.BackgroundColor3 = Color3.fromRGB(101, 99, 156)
+coolify.BorderSizePixel = 0
+coolify.Position = UDim2.new(0, 0, 0.554844618, 0)
+coolify.Size = UDim2.new(0, 148, 0, 28)
+coolify.Font = Enum.Font.Cartoon
+coolify.Text = "Coolify (Sunglasses)"
+coolify.TextColor3 = Color3.fromRGB(255, 255, 255)
+coolify.TextScaled = true
+coolify.TextSize = 14.000
+coolify.TextWrapped = true
+
+whizzall.Name = "whizzall"
+whizzall.Parent = Framey_4
+whizzall.BackgroundColor3 = Color3.fromRGB(101, 99, 156)
+whizzall.BorderSizePixel = 0
+whizzall.Position = UDim2.new(0, 0, 0.730217755, 0)
+whizzall.Size = UDim2.new(0, 148, 0, 28)
+whizzall.Font = Enum.Font.Cartoon
+whizzall.Text = "Whizz All"
+whizzall.TextColor3 = Color3.fromRGB(255, 255, 255)
+whizzall.TextScaled = true
+whizzall.TextSize = 14.000
+whizzall.TextWrapped = true
+
+silentaimboot_2.Name = "silentaimboot"
+silentaimboot_2.Parent = Framey_4
+silentaimboot_2.BackgroundColor3 = Color3.fromRGB(101, 99, 156)
+silentaimboot_2.BorderSizePixel = 0
+silentaimboot_2.Position = UDim2.new(0, 0, 0.260068476, 0)
+silentaimboot_2.Size = UDim2.new(0, 148, 0, 28)
+silentaimboot_2.Font = Enum.Font.Cartoon
+silentaimboot_2.Text = "Killaura"
+silentaimboot_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+silentaimboot_2.TextScaled = true
+silentaimboot_2.TextSize = 14.000
+silentaimboot_2.TextWrapped = true
+
 
 --print("got past gui variables")
 
@@ -934,7 +1021,7 @@ TextButton_15.MouseButton1Click:Connect(function()
 			end
 		end
 		wait()
-				for i,v in pairs(workspace:GetDescendants()) do
+		for i,v in pairs(workspace:GetDescendants()) do
 			if v.Name == "pogpog" or v.Name == "chamcham" then
 				v:Destroy()
 			else
@@ -942,7 +1029,7 @@ TextButton_15.MouseButton1Click:Connect(function()
 			end
 		end
 	else
-	    		for i,v in pairs(workspace:GetDescendants()) do
+		for i,v in pairs(workspace:GetDescendants()) do
 			if v.Name == "pogpog" or v.Name == "chamcham" then
 				v:Destroy()
 			else
@@ -995,6 +1082,111 @@ TextButton_17.MouseButton1Click:Connect(function()
 	end
 end)
 
+triggerbot = false
+
+triggerboot.MouseButton1Click:Connect(function()
+	triggerbot = not triggerbot
+end)
+
+nohead.MouseButton1Click:Connect(function()
+	char = game.Players.LocalPlayer
+	if char:FindFirstChild("FakeHead") then
+		char.FakeHead:Destroy()
+	else
+
+	end
+end)
+
+coolify.MouseButton1Click:Connect(function()
+	game.ReplicatedStorage.Events.Sunglasses:FireServer()
+end)
+
+akillaura = false
+silentaimboot_2.MouseButton1Click:Connect(function()
+	akillaura = not akillaura
+end)
+
+whizzy = false
+whizzall.MouseButton1Click:Connect(function()
+	whizzy = not whizzy
+end)
+_G.SilentBim = false
+_G.AimPart = "Random"
+
+local CurrentCamera = workspace.CurrentCamera
+local Players = game:GetService("Players")
+local LocalPlayer = Players.LocalPlayer
+local Mouse = LocalPlayer:GetMouse()
+function ClosestPlayer()
+	local MaxDist, Closest = math.huge
+	for i,v in pairs(Players.GetPlayers(Players)) do
+		if v ~= LocalPlayer and v.Character then
+			local Head = v.Character.FindFirstChild(v.Character, "Head")
+			if Head then 
+				local Pos, Vis = CurrentCamera.WorldToScreenPoint(CurrentCamera, Head.Position)
+				if Vis then
+					local MousePos, TheirPos = Vector2.new(Mouse.X, Mouse.Y), Vector2.new(Pos.X, Pos.Y)
+					local Dist = (TheirPos - MousePos).Magnitude
+					if Dist < MaxDist then
+						MaxDist = Dist
+						Closest = v
+					end
+				end
+			end
+		end
+	end
+	return Closest
+end
+
+function GetAimPart()
+	if _G.AimPart == 'Head' then
+		return 'Head'
+	end
+	if _G.AimPart == 'LowerTorso' then
+		return 'LowerTorso'
+	end
+	if _G.AimPart == 'Random' then
+		if math.random(1,4) == 1 then
+			return 'Head'
+		else
+			return 'LowerTorso'
+		end
+	end
+end
+
+if getrawmetatable and setreadonly and newcclosure and getnamecallmethod then -- check if silent aimbot is supported
+	silentaimboot.MouseButton1Click:Connect(function()
+		if _G.SilentBim then
+			_G.SilentBim = false
+			local mt = getrawmetatable(game)
+			local index = mt.__index
+			setreadonly(mt, false)
+			mt.__namecall = namecallold
+		else
+			_G.SilentBim = true
+			local mt = getrawmetatable(game)
+			local index = mt.__index
+			setreadonly(mt, false)
+			mt.__namecall = newcclosure(function(self, ...)
+				local Args = {...}
+				NamecallMethod = getnamecallmethod()
+				if NamecallMethod == "FindPartOnRayWithIgnoreList" then
+					local CP = ClosestPlayer()
+					if CP and CP.Character and CP.Character.FindFirstChild(CP.Character, GetAimPart()) then
+						Args[1] = Ray.new(CurrentCamera.CFrame.Position, (CP.Character[GetAimPart()].Position - CurrentCamera.CFrame.Position).Unit * 1000)
+						return namecallold(self, unpack(Args))
+					end
+				end
+				return namecallold(self, ...)
+			end)
+		end
+	end)
+else
+	silentaimboot.Visible = false
+end
+
+
+
 function CreateSG(name,parent,face)
 	local SurfaceGui = Instance.new("SurfaceGui",parent)
 	SurfaceGui.Parent = parent
@@ -1043,14 +1235,54 @@ mouse.KeyDown:Connect(function(lol)
 end)
 
 allweapons.MouseButton1Click:Connect(function()
-            for i,v in pairs(workspace.Prison_ITEMS.giver:GetChildren()) do
-            workspace.Remote.ItemHandler:InvokeServer(v.ITEMPICKUP)
-        end
-    end)
+	for i,v in pairs(workspace.Prison_ITEMS.giver:GetChildren()) do
+		workspace.Remote.ItemHandler:InvokeServer(v.ITEMPICKUP)
+	end
+end)
 
-    game:GetService("RunService").RenderStepped:Connect(function()
-    wait()
-       	if killaura then
+triggerdebounce = false
+
+game:GetService("RunService").RenderStepped:Connect(function()
+	wait()
+	if whizzy then
+		wait(.1)
+		pogtable = game.Players:GetChildren()
+		for i,v in pairs(pogtable) do
+			wait()
+			game.ReplicatedStorage.Events.Whizz:FireServer(v)
+		end
+	end
+	if triggerbot then
+		wait()
+		mouse = game.Players.LocalPlayer:GetMouse()
+		if mouse.Target ~= nil and mouse.Target ~= workspace then
+			if mouse.Target.Parent:FindFirstChildOfClass("Humanoid") then
+				if mouse1click then
+					if triggerdebounce then
+						-- no
+					else
+						mouse1click()
+						triggerdebounce = true
+						wait(.1)
+						triggerdebounce = false
+					end
+				else
+					-- bruh
+				end
+			end
+		end
+	end
+	if akillaura then
+		for i,v in pairs(game.Players:GetPlayers()) do
+			if v and v ~= game.Players.LocalPlayer and v.Character and v.Character:FindFirstChild("Head") then    
+				local Distance = (game.Players.LocalPlayer.Character.PrimaryPart.Position - v.Character.PrimaryPart.Position).magnitude 
+				if Distance <= 12 then
+					game:GetService("ReplicatedStorage").Events.FallDamage:FireServer(100, v.Character:FindFirstChild("Hitbox"))
+				end
+			end
+		end
+	end
+	if killaura then
 		for i,v in pairs(game.Players:GetChildren()) do
 			wait()
 			if v~=game.Players.LocalPlayer then
@@ -1059,8 +1291,8 @@ allweapons.MouseButton1Click:Connect(function()
 			end
 		end
 	end
-    end)
-    
+end)
+
 while wait() do
 	if esp then
 		wait(.1)
@@ -1078,14 +1310,16 @@ while wait() do
 					end
 				end
 			end
-			end
+		end
 	end
 	if skywarsdisabler then
 		if game:GetService("Players").LocalPlayer.PlayerGui.Extra:FindFirstChild("AntiSploitClient2") then
 			game:GetService("Players").LocalPlayer.PlayerGui.Extra.AntiSploitClient2:Destroy()
+			print("Successful! AntiSploitClient2 has been disabled.")
 		end  
 		if game:GetService("Players").LocalPlayer.PlayerGui.Extra:FindFirstChild("AntiSploitClient") then
 			game:GetService("Players").LocalPlayer.PlayerGui.Extra.AntiSploitClient:Destroy()
+			print("Successful! AntiSploitClient has been disabled.")
 		end  
 	else
 		-- no
