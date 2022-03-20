@@ -1066,6 +1066,14 @@ end)
 skywarsdisabler = false
 
 TextButton_22.MouseButton1Click:Connect(function()
+		if game:GetService("Players").LocalPlayer.PlayerGui.Extra:FindFirstChild("AntiSploitClient2") then
+			game:GetService("Players").LocalPlayer.PlayerGui.Extra.AntiSploitClient2:Destroy()
+			print("Successful! AntiSploitClient2 has been disabled.")
+		end  
+		if game:GetService("Players").LocalPlayer.PlayerGui.Extra:FindFirstChild("AntiSploitClient") then
+			game:GetService("Players").LocalPlayer.PlayerGui.Extra.AntiSploitClient:Destroy()
+			print("Successful! AntiSploitClient has been disabled.")
+		end  
 	skywarsdisabler = true
 end)
 
