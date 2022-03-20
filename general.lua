@@ -1109,7 +1109,7 @@ end)
 
 akillaura = false
 silentaimboot_2.MouseButton1Click:Connect(function()
-	akillaura = not akillaura
+	--akillaura = not akillaura
 end)
 
 whizzy = false
@@ -1257,7 +1257,7 @@ game:GetService("RunService").RenderStepped:Connect(function()
 		end
 	end
 	if triggerbot then
-		wait()
+		wait(math.random(0.1, 0.2))
 		mouse = game.Players.LocalPlayer:GetMouse()
 		if mouse.Target ~= nil and mouse.Target ~= workspace then
 			if mouse.Target.Parent:FindFirstChildOfClass("Humanoid") then
@@ -1266,9 +1266,6 @@ game:GetService("RunService").RenderStepped:Connect(function()
 						-- no
 					else
 						mouse1click()
-						triggerdebounce = true
-						wait(.1)
-						triggerdebounce = false
 					end
 				else
 					-- bruh
