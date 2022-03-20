@@ -1066,14 +1066,12 @@ end)
 skywarsdisabler = false
 
 TextButton_22.MouseButton1Click:Connect(function()
-		if game:GetService("Players").LocalPlayer.PlayerGui.Extra:FindFirstChild("AntiSploitClient2") then
-			game:GetService("Players").LocalPlayer.PlayerGui.Extra.AntiSploitClient2:Destroy()
-			print("Successful! AntiSploitClient2 has been disabled.")
-		end  
-		if game:GetService("Players").LocalPlayer.PlayerGui.Extra:FindFirstChild("AntiSploitClient") then
-			game:GetService("Players").LocalPlayer.PlayerGui.Extra.AntiSploitClient:Destroy()
-			print("Successful! AntiSploitClient has been disabled.")
-		end  
+    wait()
+for i,v in pairs(game.Players.LocalPlayer.PlayerGui.Extra:GetChildren()) do
+if v.Name == "Local" then
+    v:Destroy()
+    end
+		end
 	skywarsdisabler = true
 end)
 
@@ -1162,16 +1160,19 @@ function GetAimPart()
 	end
 end
 
-if getrawmetatable and setreadonly and newcclosure and getnamecallmethod then -- check if silent aimbot is supported
+namecallold = nil
+SilentBim = false
+
+if getrawmetatable and setreadonly and newcclosure and getnamecallmethod and mt then -- check if silent aimbot is supported
 	silentaimboot.MouseButton1Click:Connect(function()
-		if _G.SilentBim then
-			_G.SilentBim = false
+		if SilentBim then
+			SilentBim = false
 			local mt = getrawmetatable(game)
 			local index = mt.__index
 			setreadonly(mt, false)
 			mt.__namecall = namecallold
 		else
-			_G.SilentBim = true
+			SilentBim = true
 			local mt = getrawmetatable(game)
 			local index = mt.__index
 			setreadonly(mt, false)
@@ -1321,15 +1322,16 @@ while wait() do
 		end
 	end
 	if skywarsdisabler then
-		if game:GetService("Players").LocalPlayer.PlayerGui.Extra:FindFirstChild("AntiSploitClient2") then
-			game:GetService("Players").LocalPlayer.PlayerGui.Extra.AntiSploitClient2:Destroy()
-			print("Successful! AntiSploitClient2 has been disabled.")
-		end  
-		if game:GetService("Players").LocalPlayer.PlayerGui.Extra:FindFirstChild("AntiSploitClient") then
-			game:GetService("Players").LocalPlayer.PlayerGui.Extra.AntiSploitClient:Destroy()
-			print("Successful! AntiSploitClient has been disabled.")
-		end  
+	    wait()
+	    if game.Players.LocalPlayer.PlayerGui.Extra then
+	for i,v in pairs(game.Players.LocalPlayer.PlayerGui.Extra:GetChildren()) do
+	    wait()
+if v.Name == "Local" then
+    v:Destroy()
+    end
+		end
 	else
 		-- no
-	end
+	    end
+end
 end
