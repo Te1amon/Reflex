@@ -1,11 +1,8 @@
--- made by Webmario, took a long time to make
--- pls give credit to me if u showcase or use (skid) my code
+-- Scripted and designed by Te1amon (WebMario)
+-- I don't mind if you use my code, as long as you give credit to me :)
 
---[[
-Credits:
-LiquidBounce - UI Inspiration
-Infinite Yield - Code for Fly
-]]
+-- Also some snippets of code are from Infinite Yield, thanks to them!
+-- Infinite Yield: https://infinite.yiff.gg/
 
 local reflexpog = Instance.new("ScreenGui")
 local Movement = Instance.new("Frame")
@@ -83,21 +80,21 @@ reflexpog.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 Movement.Name = "Movement"
 Movement.Parent = reflexpog
-Movement.BackgroundColor3 = Color3.fromRGB(43, 43, 81)
+Movement.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
 Movement.BorderSizePixel = 0
 Movement.Position = UDim2.new(0.0335707031, 0, 0.0183639396, 0)
 Movement.Size = UDim2.new(0, 148, 0, 32)
 
 Framey.Name = "Framey"
 Framey.Parent = Movement
-Framey.BackgroundColor3 = Color3.fromRGB(73, 73, 138)
+Framey.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
 Framey.BackgroundTransparency = 0.100
 Framey.BorderSizePixel = 0
 Framey.Position = UDim2.new(-0.000213107545, 0, 0.987113953, 0)
 Framey.Size = UDim2.new(0, 148, 0, 268)
 
 TextButton.Parent = Framey
-TextButton.BackgroundColor3 = Color3.fromRGB(101, 99, 156)
+TextButton.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
 TextButton.BorderSizePixel = 0
 TextButton.Position = UDim2.new(0, 0, 0.129471481, 0)
 TextButton.Size = UDim2.new(0, 148, 0, 28)
@@ -110,7 +107,7 @@ TextButton.TextWrapped = true
 
 speedbox.Name = "speedbox"
 speedbox.Parent = Framey
-speedbox.BackgroundColor3 = Color3.fromRGB(101, 99, 156)
+speedbox.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
 speedbox.BorderSizePixel = 0
 speedbox.Position = UDim2.new(0, 0, -0.000802947208, 0)
 speedbox.Size = UDim2.new(0, 148, 0, 28)
@@ -125,7 +122,7 @@ speedbox.TextWrapped = true
 
 jumpbox.Name = "jumpbox"
 jumpbox.Parent = Framey
-jumpbox.BackgroundColor3 = Color3.fromRGB(101, 99, 156)
+jumpbox.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
 jumpbox.BorderSizePixel = 0
 jumpbox.Position = UDim2.new(0, 0, 0.286510527, 0)
 jumpbox.Size = UDim2.new(0, 148, 0, 28)
@@ -139,7 +136,7 @@ jumpbox.TextSize = 14.000
 jumpbox.TextWrapped = true
 
 TextButton_2.Parent = Framey
-TextButton_2.BackgroundColor3 = Color3.fromRGB(101, 99, 156)
+TextButton_2.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
 TextButton_2.BorderSizePixel = 0
 TextButton_2.Position = UDim2.new(0, 0, 0.416784912, 0)
 TextButton_2.Size = UDim2.new(0, 148, 0, 28)
@@ -151,7 +148,7 @@ TextButton_2.TextSize = 14.000
 TextButton_2.TextWrapped = true
 
 TextButton_3.Parent = Framey
-TextButton_3.BackgroundColor3 = Color3.fromRGB(101, 99, 156)
+TextButton_3.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
 TextButton_3.BorderSizePixel = 0
 TextButton_3.Position = UDim2.new(0, 0, 0.573501348, 0)
 TextButton_3.Size = UDim2.new(0, 148, 0, 28)
@@ -163,7 +160,7 @@ TextButton_3.TextSize = 14.000
 TextButton_3.TextWrapped = true
 
 TextButton_4.Parent = Framey
-TextButton_4.BackgroundColor3 = Color3.fromRGB(101, 99, 156)
+TextButton_4.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
 TextButton_4.BorderSizePixel = 0
 TextButton_4.Position = UDim2.new(0.00696986448, 0, 0.700367033, 0)
 TextButton_4.Size = UDim2.new(0, 147, 0, 28)
@@ -189,7 +186,7 @@ TextLabel.TextWrapped = true
 
 SFOTH.Name = "SFOTH"
 SFOTH.Parent = reflexpog
-SFOTH.BackgroundColor3 = Color3.fromRGB(43, 43, 81)
+SFOTH.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
 SFOTH.BorderSizePixel = 0
 SFOTH.Position = UDim2.new(0.225839272, 0, 0.0183639396, 0)
 SFOTH.Size = UDim2.new(0, 148, 0, 32)
@@ -197,7 +194,7 @@ SFOTH.Visible = false
 
 Framey_2.Name = "Framey"
 Framey_2.Parent = SFOTH
-Framey_2.BackgroundColor3 = Color3.fromRGB(73, 73, 138)
+Framey_2.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
 Framey_2.BackgroundTransparency = 0.100
 Framey_2.BorderSizePixel = 0
 Framey_2.Position = UDim2.new(-0.000213107545, 0, 0.987113953, 0)
@@ -205,7 +202,7 @@ Framey_2.Size = UDim2.new(0, 148, 0, 268)
 
 reachbox.Name = "reachbox"
 reachbox.Parent = Framey_2
-reachbox.BackgroundColor3 = Color3.fromRGB(101, 99, 156)
+reachbox.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
 reachbox.BorderSizePixel = 0
 reachbox.Position = UDim2.new(0, 0, -0.000802893192, 0)
 reachbox.Size = UDim2.new(0, 148, 0, 28)
@@ -219,7 +216,7 @@ reachbox.TextSize = 14.000
 reachbox.TextWrapped = true
 
 TextButton_5.Parent = Framey_2
-TextButton_5.BackgroundColor3 = Color3.fromRGB(101, 99, 156)
+TextButton_5.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
 TextButton_5.BorderSizePixel = 0
 TextButton_5.Position = UDim2.new(0, 0, 0.125740141, 0)
 TextButton_5.Size = UDim2.new(0, 148, 0, 28)
@@ -231,7 +228,7 @@ TextButton_5.TextSize = 14.000
 TextButton_5.TextWrapped = true
 
 TextButton_6.Parent = Framey_2
-TextButton_6.BackgroundColor3 = Color3.fromRGB(101, 99, 156)
+TextButton_6.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
 TextButton_6.BorderSizePixel = 0
 TextButton_6.Position = UDim2.new(0, 0, 0.286187887, 0)
 TextButton_6.Size = UDim2.new(0, 148, 0, 28)
@@ -257,21 +254,21 @@ TextLabel_2.TextWrapped = true
 
 PrisonLife.Name = "PrisonLife"
 PrisonLife.Parent = reflexpog
-PrisonLife.BackgroundColor3 = Color3.fromRGB(43, 43, 81)
+PrisonLife.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
 PrisonLife.BorderSizePixel = 0
 PrisonLife.Position = UDim2.new(0.223804682, 0, 0.0166944899, 0)
 PrisonLife.Size = UDim2.new(0, 148, 0, 32)
 
 Framey_3.Name = "Framey"
 Framey_3.Parent = PrisonLife
-Framey_3.BackgroundColor3 = Color3.fromRGB(73, 73, 138)
+Framey_3.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
 Framey_3.BackgroundTransparency = 0.100
 Framey_3.BorderSizePixel = 0
 Framey_3.Position = UDim2.new(-0.000213210646, 0, 0.987113953, 0)
 Framey_3.Size = UDim2.new(0, 148, 0, 300)
 
 TextButton_7.Parent = Framey_3
-TextButton_7.BackgroundColor3 = Color3.fromRGB(101, 99, 156)
+TextButton_7.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
 TextButton_7.BorderSizePixel = 0
 TextButton_7.Position = UDim2.new(0, 0, 0.00260581076, 0)
 TextButton_7.Size = UDim2.new(0, 148, 0, 28)
@@ -283,7 +280,7 @@ TextButton_7.TextSize = 14.000
 TextButton_7.TextWrapped = true
 
 TextButton_8.Parent = Framey_3
-TextButton_8.BackgroundColor3 = Color3.fromRGB(101, 99, 156)
+TextButton_8.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
 TextButton_8.BorderSizePixel = 0
 TextButton_8.Position = UDim2.new(0, 0, 0.258322507, 0)
 TextButton_8.Size = UDim2.new(0, 148, 0, 28)
@@ -295,7 +292,7 @@ TextButton_8.TextSize = 14.000
 TextButton_8.TextWrapped = true
 
 TextButton_9.Parent = Framey_3
-TextButton_9.BackgroundColor3 = Color3.fromRGB(101, 99, 156)
+TextButton_9.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
 TextButton_9.BorderSizePixel = 0
 TextButton_9.Position = UDim2.new(0, 0, 0.116008572, 0)
 TextButton_9.Size = UDim2.new(0, 148, 0, 28)
@@ -307,7 +304,7 @@ TextButton_9.TextSize = 14.000
 TextButton_9.TextWrapped = true
 
 TextButton_10.Parent = Framey_3
-TextButton_10.BackgroundColor3 = Color3.fromRGB(101, 99, 156)
+TextButton_10.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
 TextButton_10.BorderSizePixel = 0
 TextButton_10.Position = UDim2.new(0, 0, 0.375188202, 0)
 TextButton_10.Size = UDim2.new(0, 148, 0, 28)
@@ -319,7 +316,7 @@ TextButton_10.TextSize = 14.000
 TextButton_10.TextWrapped = true
 
 TextButton_11.Parent = Framey_3
-TextButton_11.BackgroundColor3 = Color3.fromRGB(101, 99, 156)
+TextButton_11.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
 TextButton_11.BorderSizePixel = 0
 TextButton_11.Position = UDim2.new(0, 0, 0.515649915, 0)
 TextButton_11.Size = UDim2.new(0, 148, 0, 28)
@@ -331,7 +328,7 @@ TextButton_11.TextSize = 14.000
 TextButton_11.TextWrapped = true
 
 TextButton_12.Parent = Framey_3
-TextButton_12.BackgroundColor3 = Color3.fromRGB(101, 99, 156)
+TextButton_12.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
 TextButton_12.BorderSizePixel = 0
 TextButton_12.Position = UDim2.new(0, 0, 0.628654659, 0)
 TextButton_12.Size = UDim2.new(0, 148, 0, 28)
@@ -343,7 +340,7 @@ TextButton_12.TextSize = 14.000
 TextButton_12.TextWrapped = true
 
 TextButton_13.Parent = Framey_3
-TextButton_13.BackgroundColor3 = Color3.fromRGB(101, 99, 156)
+TextButton_13.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
 TextButton_13.BorderSizePixel = 0
 TextButton_13.Position = UDim2.new(0, 0, 0.748853683, 0)
 TextButton_13.Size = UDim2.new(0, 148, 0, 28)
@@ -369,7 +366,7 @@ TextLabel_3.TextWrapped = true
 
 Arsenal.Name = "Arsenal"
 Arsenal.Parent = reflexpog
-Arsenal.BackgroundColor3 = Color3.fromRGB(43, 43, 81)
+Arsenal.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
 Arsenal.BorderSizePixel = 0
 Arsenal.Position = UDim2.new(0.223804682, 0, 0.0166944899, 0)
 Arsenal.Size = UDim2.new(0, 148, 0, 32)
@@ -377,14 +374,14 @@ Arsenal.Visible = false
 
 Framey_4.Name = "Framey"
 Framey_4.Parent = Arsenal
-Framey_4.BackgroundColor3 = Color3.fromRGB(73, 73, 138)
+Framey_4.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
 Framey_4.BackgroundTransparency = 0.100
 Framey_4.BorderSizePixel = 0
 Framey_4.Position = UDim2.new(-0.000213107545, 0, 0.987113953, 0)
 Framey_4.Size = UDim2.new(0, 148, 0, 268)
 
 TextButton_14.Parent = Framey_4
-TextButton_14.BackgroundColor3 = Color3.fromRGB(101, 99, 156)
+TextButton_14.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
 TextButton_14.BorderSizePixel = 0
 TextButton_14.Position = UDim2.new(0, 0, 0.741411746, 0)
 TextButton_14.Size = UDim2.new(0, 148, 0, 28)
@@ -425,7 +422,7 @@ TextLabel_5.TextWrapped = true
 
 Visual.Name = "Visual"
 Visual.Parent = reflexpog
-Visual.BackgroundColor3 = Color3.fromRGB(43, 43, 81)
+Visual.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
 Visual.BorderSizePixel = 0
 Visual.Position = UDim2.new(0.414038658, 0, 0.0183639396, 0)
 Visual.Size = UDim2.new(0, 148, 0, 32)
@@ -439,7 +436,7 @@ Framey_5.Position = UDim2.new(-0.000213107545, 0, 0.987113953, 0)
 Framey_5.Size = UDim2.new(0, 148, 0, 268)
 
 TextButton_15.Parent = Framey_5
-TextButton_15.BackgroundColor3 = Color3.fromRGB(101, 99, 156)
+TextButton_15.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
 TextButton_15.BorderSizePixel = 0
 TextButton_15.Position = UDim2.new(0, 0, 0.00633712113, 0)
 TextButton_15.Size = UDim2.new(0, 148, 0, 28)
@@ -451,19 +448,19 @@ TextButton_15.TextSize = 14.000
 TextButton_15.TextWrapped = true
 
 TextButton_16.Parent = Framey_5
-TextButton_16.BackgroundColor3 = Color3.fromRGB(101, 99, 156)
+TextButton_16.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
 TextButton_16.BorderSizePixel = 0
 TextButton_16.Position = UDim2.new(0, 0, 0.129471451, 0)
 TextButton_16.Size = UDim2.new(0, 148, 0, 28)
 TextButton_16.Font = Enum.Font.Cartoon
-TextButton_16.Text = "Hitboxes"
+TextButton_16.Text = "Show Hitboxes"
 TextButton_16.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextButton_16.TextScaled = true
 TextButton_16.TextSize = 14.000
 TextButton_16.TextWrapped = true
 
 TextButton_17.Parent = Framey_5
-TextButton_17.BackgroundColor3 = Color3.fromRGB(101, 99, 156)
+TextButton_17.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
 TextButton_17.BorderSizePixel = 0
 TextButton_17.Position = UDim2.new(0, 0, 0.260068476, 0)
 TextButton_17.Size = UDim2.new(0, 148, 0, 28)
@@ -489,7 +486,7 @@ TextLabel_6.TextWrapped = true
 
 SS.Name = "SS"
 SS.Parent = reflexpog
-SS.BackgroundColor3 = Color3.fromRGB(43, 43, 81)
+SS.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
 SS.BorderSizePixel = 0
 SS.Position = UDim2.new(0.610376418, 0, 0.0183639396, 0)
 SS.Size = UDim2.new(0, 148, 0, 32)
@@ -504,7 +501,7 @@ Framey_6.Position = UDim2.new(-0.000213107545, 0, 0.987113953, 0)
 Framey_6.Size = UDim2.new(0, 148, 0, 268)
 
 TextButton_18.Parent = Framey_6
-TextButton_18.BackgroundColor3 = Color3.fromRGB(101, 99, 156)
+TextButton_18.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
 TextButton_18.BorderSizePixel = 0
 TextButton_18.Position = UDim2.new(0, 0, 0.00633712113, 0)
 TextButton_18.Size = UDim2.new(0, 148, 0, 28)
@@ -516,7 +513,7 @@ TextButton_18.TextSize = 14.000
 TextButton_18.TextWrapped = true
 
 TextButton_19.Parent = Framey_6
-TextButton_19.BackgroundColor3 = Color3.fromRGB(101, 99, 156)
+TextButton_19.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
 TextButton_19.BorderSizePixel = 0
 TextButton_19.Position = UDim2.new(0, 0, 0.129471451, 0)
 TextButton_19.Size = UDim2.new(0, 148, 0, 28)
@@ -528,7 +525,7 @@ TextButton_19.TextSize = 14.000
 TextButton_19.TextWrapped = true
 
 TextButton_20.Parent = Framey_6
-TextButton_20.BackgroundColor3 = Color3.fromRGB(101, 99, 156)
+TextButton_20.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
 TextButton_20.BorderSizePixel = 0
 TextButton_20.Position = UDim2.new(0, 0, 0.260068476, 0)
 TextButton_20.Size = UDim2.new(0, 148, 0, 28)
@@ -540,7 +537,7 @@ TextButton_20.TextSize = 14.000
 TextButton_20.TextWrapped = true
 
 TextButton_21.Parent = Framey_6
-TextButton_21.BackgroundColor3 = Color3.fromRGB(101, 99, 156)
+TextButton_21.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
 TextButton_21.BorderSizePixel = 0
 TextButton_21.Position = UDim2.new(0, 0, 0.390665472, 0)
 TextButton_21.Size = UDim2.new(0, 148, 0, 28)
@@ -566,7 +563,7 @@ TextLabel_7.TextWrapped = true
 
 SS_unsupported.Name = "SS_unsupported"
 SS_unsupported.Parent = reflexpog
-SS_unsupported.BackgroundColor3 = Color3.fromRGB(43, 43, 81)
+SS_unsupported.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
 SS_unsupported.BorderSizePixel = 0
 SS_unsupported.Position = UDim2.new(0.610376418, 0, 0.0183639396, 0)
 SS_unsupported.Size = UDim2.new(0, 148, 0, 32)
@@ -607,7 +604,7 @@ TextLabel_9.TextWrapped = true
 
 Skywars.Name = "Skywars"
 Skywars.Parent = reflexpog
-Skywars.BackgroundColor3 = Color3.fromRGB(43, 43, 81)
+Skywars.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
 Skywars.BorderSizePixel = 0
 Skywars.Position = UDim2.new(0.225839272, 0, 0.0183639396, 0)
 Skywars.Size = UDim2.new(0, 148, 0, 32)
@@ -622,7 +619,7 @@ Framey_8.Position = UDim2.new(-0.000213107545, 0, 0.987113953, 0)
 Framey_8.Size = UDim2.new(0, 148, 0, 268)
 
 TextButton_22.Parent = Framey_8
-TextButton_22.BackgroundColor3 = Color3.fromRGB(101, 99, 156)
+TextButton_22.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
 TextButton_22.BorderSizePixel = 0
 TextButton_22.Position = UDim2.new(0, 0, 0.0212625265, 0)
 TextButton_22.Size = UDim2.new(0, 148, 0, 28)
@@ -648,7 +645,7 @@ TextLabel_10.TextWrapped = true
 
 --print("most gui")
 allweapons.Parent = Framey_3
-allweapons.BackgroundColor3 = Color3.fromRGB(101, 99, 156)
+allweapons.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
 allweapons.BorderSizePixel = 0
 allweapons.Position = UDim2.new(0, 0, 0.868853688, 0)
 allweapons.Size = UDim2.new(0, 148, 0, 28)
@@ -661,7 +658,7 @@ allweapons.TextWrapped = true
 
 triggerboot.Name = "triggerboot"
 triggerboot.Parent = Framey_4
-triggerboot.BackgroundColor3 = Color3.fromRGB(101, 99, 156)
+triggerboot.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
 triggerboot.BorderSizePixel = 0
 triggerboot.Position = UDim2.new(0, 0, 0.0100684762, 0)
 triggerboot.Size = UDim2.new(0, 148, 0, 28)
@@ -674,7 +671,7 @@ triggerboot.TextWrapped = true
 
 silentaimboot.Name = "silentaimboot"
 silentaimboot.Parent = Framey_4
-silentaimboot.BackgroundColor3 = Color3.fromRGB(101, 99, 156)
+silentaimboot.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
 silentaimboot.BorderSizePixel = 0
 silentaimboot.Position = UDim2.new(0, 0, 0.133202806, 0)
 silentaimboot.Size = UDim2.new(0, 148, 0, 28)
@@ -687,7 +684,7 @@ silentaimboot.TextWrapped = true
 
 nohead.Name = "nohead"
 nohead.Parent = Framey_4
-nohead.BackgroundColor3 = Color3.fromRGB(101, 99, 156)
+nohead.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
 nohead.BorderSizePixel = 0
 nohead.Position = UDim2.new(0, 0, 0.420516253, 0)
 nohead.Size = UDim2.new(0, 148, 0, 28)
@@ -700,7 +697,7 @@ nohead.TextWrapped = true
 
 coolify.Name = "coolify"
 coolify.Parent = Framey_4
-coolify.BackgroundColor3 = Color3.fromRGB(101, 99, 156)
+coolify.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
 coolify.BorderSizePixel = 0
 coolify.Position = UDim2.new(0, 0, 0.554844618, 0)
 coolify.Size = UDim2.new(0, 148, 0, 28)
@@ -713,7 +710,7 @@ coolify.TextWrapped = true
 
 whizzall.Name = "whizzall"
 whizzall.Parent = Framey_4
-whizzall.BackgroundColor3 = Color3.fromRGB(101, 99, 156)
+whizzall.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
 whizzall.BorderSizePixel = 0
 whizzall.Position = UDim2.new(0, 0, 0.730217755, 0)
 whizzall.Size = UDim2.new(0, 148, 0, 28)
@@ -726,7 +723,7 @@ whizzall.TextWrapped = true
 
 silentaimboot_2.Name = "silentaimboot"
 silentaimboot_2.Parent = Framey_4
-silentaimboot_2.BackgroundColor3 = Color3.fromRGB(101, 99, 156)
+silentaimboot_2.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
 silentaimboot_2.BorderSizePixel = 0
 silentaimboot_2.Position = UDim2.new(0, 0, 0.260068476, 0)
 silentaimboot_2.Size = UDim2.new(0, 148, 0, 28)
@@ -983,6 +980,7 @@ end)
 
 TextButton_11.MouseButton1Click:Connect(function()
 	workspace.Remote.TeamEvent:FireServer("Bright blue")
+		wait()
 	workspace.Remote.loadchar:InvokeServer()
 	wait(.1)
 	for i,v in pairs(game.Players.LocalPlayer.Backpack:GetDescendants()) do
@@ -1041,11 +1039,21 @@ TextButton_15.MouseButton1Click:Connect(function()
 end)
 
 hitboxes = false
---[[
-TextButton_16.MouseButton1Click:Connect(function()
 
+TextButton_16.MouseButton1Click:Connect(function()
+for i,v in pairs(game.Players:GetChildren()) do
+	if v.Character and v ~= game.Players.LocalPlayer then
+			for e,a in pairs(v.Character:GetChildren()) do
+					if a:IsA("Part") or a:IsA("MeshPart") then
+						loll = Instance.new("SelectionBox")
+						loll.Parent = a
+						loll.Adornee = a
+						end
+					end
+		end
+			end
 end)
-]]
+
 
 TextButton_18.MouseButton1Click:Connect(function()
 	game.ReplicatedStorage.RBXGuiHandler:FireServer("God", 69420)
