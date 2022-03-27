@@ -429,7 +429,7 @@ Visual.Size = UDim2.new(0, 148, 0, 32)
 
 Framey_5.Name = "Framey"
 Framey_5.Parent = Visual
-Framey_5.BackgroundColor3 = Color3.fromRGB(73, 73, 138)
+Framey_5.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
 Framey_5.BackgroundTransparency = 0.100
 Framey_5.BorderSizePixel = 0
 Framey_5.Position = UDim2.new(-0.000213107545, 0, 0.987113953, 0)
@@ -494,7 +494,7 @@ SS.Visible = false
 
 Framey_6.Name = "Framey"
 Framey_6.Parent = SS
-Framey_6.BackgroundColor3 = Color3.fromRGB(73, 73, 138)
+Framey_6.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
 Framey_6.BackgroundTransparency = 0.100
 Framey_6.BorderSizePixel = 0
 Framey_6.Position = UDim2.new(-0.000213107545, 0, 0.987113953, 0)
@@ -570,7 +570,7 @@ SS_unsupported.Size = UDim2.new(0, 148, 0, 32)
 
 Framey_7.Name = "Framey"
 Framey_7.Parent = SS_unsupported
-Framey_7.BackgroundColor3 = Color3.fromRGB(73, 73, 138)
+Framey_7.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
 Framey_7.BackgroundTransparency = 0.100
 Framey_7.BorderSizePixel = 0
 Framey_7.Position = UDim2.new(-0.000213107545, 0, 0.987113953, 0)
@@ -612,7 +612,7 @@ Skywars.Visible = false
 
 Framey_8.Name = "Framey"
 Framey_8.Parent = Skywars
-Framey_8.BackgroundColor3 = Color3.fromRGB(73, 73, 138)
+Framey_8.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
 Framey_8.BackgroundTransparency = 0.100
 Framey_8.BorderSizePixel = 0
 Framey_8.Position = UDim2.new(-0.000213107545, 0, 0.987113953, 0)
