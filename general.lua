@@ -782,7 +782,10 @@ aimtrainerbot.TextWrapped = true
 aimtrainerbotenabled = false
 
 aimtrainerbot.MouseButton1Click:Connect(function()
+		reflexpog.Enabled = not reflexpog.Enabled
 		aimtrainerbotenabled = not aimtrainerbotenabled
+		game.StarterGui:SetCore("SendNotification", {Title="Reflex"; Text="Aim Trainer Bot has been enabled"; Duration=2;})
+game.StarterGui:SetCore("SendNotification", {Title="Reflex"; Text="Press the = key to disable the bot and to show the gui again."; Duration=3;})
 		end)
 
 
