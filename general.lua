@@ -66,6 +66,7 @@ local silentaimboot_2 = Instance.new("TextButton")
 local AimTrainer = Instance.new("Frame")
 local Framey_69 = Instance.new("Frame")
 local aimtrainerbot = Instance.new("TextButton")
+local TextLabel_69 = Instance.new("TextLabel")
 
 
 function randomString()
@@ -111,6 +112,19 @@ Framey_69.BackgroundTransparency = 0.100
 Framey_69.BorderSizePixel = 0
 Framey_69.Position = UDim2.new(-0.000213210646, 0, 0.987113953, 0)
 Framey_69.Size = UDim2.new(0, 148, 0, 268)
+
+TextLabel_69.Parent = AimTrainer
+TextLabel_69.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_69.BackgroundTransparency = 1.000
+TextLabel_69.BorderSizePixel = 0
+TextLabel_69.Position = UDim2.new(-0.0202702694, 0, 0, 0)
+TextLabel_69.Size = UDim2.new(0, 151, 0, 32)
+TextLabel_69.Font = Enum.Font.Cartoon
+TextLabel_69.Text = "Game Specific"
+TextLabel_69.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_69.TextScaled = true
+TextLabel_69.TextSize = 14.000
+TextLabel_69.TextWrapped = true
 
 TextButton.Parent = Framey
 TextButton.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
