@@ -63,6 +63,9 @@ local nohead = Instance.new("TextButton")
 local coolify = Instance.new("TextButton")
 local whizzall = Instance.new("TextButton")
 local silentaimboot_2 = Instance.new("TextButton")
+local AimTrainer = Instance.new("Frame")
+local Framey_69 = Instance.new("Frame")
+local aimtrainerbot = Instance.new("TextButton")
 
 
 function randomString()
@@ -92,6 +95,21 @@ Framey.BackgroundTransparency = 0.100
 Framey.BorderSizePixel = 0
 Framey.Position = UDim2.new(-0.000213107545, 0, 0.987113953, 0)
 Framey.Size = UDim2.new(0, 148, 0, 268)
+
+AimTrainer.Name = "AimTrainer"
+AimTrainer.Parent = reflexpog
+AimTrainer.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+AimTrainer.BorderSizePixel = 0
+AimTrainer.Position = UDim2.new(0.0335707031, 0, 0.0183639396, 0)
+AimTrainer.Size = UDim2.new(0, 148, 0, 32)
+
+Framey_69.Name = "Framey_69"
+Framey_69.Parent = AimTrainer
+Framey_69.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+Framey_69.BackgroundTransparency = 0.100
+Framey_69.BorderSizePixel = 0
+Framey_69.Position = UDim2.new(-0.000213107545, 0, 0.987113953, 0)
+Framey_69.Size = UDim2.new(0, 148, 0, 268)
 
 TextButton.Parent = Framey
 TextButton.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
@@ -734,6 +752,24 @@ silentaimboot_2.TextScaled = true
 silentaimboot_2.TextSize = 14.000
 silentaimboot_2.TextWrapped = true
 
+aimtrainerbot.Parent = Framey_69
+aimtrainerbot.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
+aimtrainerbot.BorderSizePixel = 0
+aimtrainerbot.Position = UDim2.new(0, 0, 0.416784912, 0)
+aimtrainerbot.Size = UDim2.new(0, 148, 0, 28)
+aimtrainerbot.Font = Enum.Font.Cartoon
+aimtrainerbot.Text = "Aim Trainer Bot"
+aimtrainerbot.TextColor3 = Color3.fromRGB(255, 255, 255)
+aimtrainerbot.TextScaled = true
+aimtrainerbot.TextSize = 14.000
+aimtrainerbot.TextWrapped = true
+
+aimtrainerbotenabled = false
+
+aimtrainerbot.MouseButton1Click:Connect(function()
+		aimtrainerbotenabled = not aimtrainerbotenabled
+		end)
+
 
 --print("got past gui variables")
 
@@ -1232,6 +1268,8 @@ elseif game.PlaceId == 47324 then
 elseif game.PlaceId == 487316 then
 	SFOTH.Visible = true
 	TextButton_6.Visible = false
+	elseif game.PlaceId == 4894081134 then
+	AimTrainer.Visible = true
 end
 
 if game.ReplicatedStorage:FindFirstChild("RBXGuiHandler") then
@@ -1302,7 +1340,18 @@ game:GetService("RunService").RenderStepped:Connect(function()
 	end
 end)
 
+CC = workspace.CurrentCamera
+
 while wait() do
+	if aimtrainerbotenabled then
+		wait(.1)
+		   for i,v in pairs(workspace:GetChildren()) do
+        if v.Name == "Target" then
+CC.CoordinateFrame = CFrame.new(CC.CoordinateFrame.p, v.CFrame.p)
+mouse1click()
+end
+end
+		end
 	if esp then
 		wait(.1)
 		for i,v in pairs (game:GetService("Players"):GetPlayers()) do
