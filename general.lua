@@ -100,15 +100,16 @@ AimTrainer.Name = "AimTrainer"
 AimTrainer.Parent = reflexpog
 AimTrainer.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
 AimTrainer.BorderSizePixel = 0
-AimTrainer.Position = UDim2.new(0.0335707031, 0, 0.0183639396, 0)
+AimTrainer.Position = UDim2.new(0.223804682, 0, 0.0166944899, 0)
 AimTrainer.Size = UDim2.new(0, 148, 0, 32)
+AimTrainer.Visible = false
 
 Framey_69.Name = "Framey_69"
 Framey_69.Parent = AimTrainer
 Framey_69.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
 Framey_69.BackgroundTransparency = 0.100
 Framey_69.BorderSizePixel = 0
-Framey_69.Position = UDim2.new(-0.000213107545, 0, 0.987113953, 0)
+Framey_69.Position = UDim2.new(-0.000213210646, 0, 0.987113953, 0)
 Framey_69.Size = UDim2.new(0, 148, 0, 268)
 
 TextButton.Parent = Framey
