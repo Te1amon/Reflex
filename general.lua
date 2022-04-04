@@ -67,6 +67,122 @@ local AimTrainer = Instance.new("Frame")
 local Framey_69 = Instance.new("Frame")
 local aimtrainerbot = Instance.new("TextButton")
 local TextLabel_69 = Instance.new("TextLabel")
+local Doomspire = Instance.new("Frame")
+local Framey_Doom = Instance.new("Frame")
+local yellow = Instance.new("TextButton")
+local blue = Instance.new("TextButton")
+local drop = Instance.new("TextButton")
+local red = Instance.new("TextButton")
+local green = Instance.new("TextButton")
+local antivoid = Instance.new("TextButton")
+local TextLabel_Doom = Instance.new("TextLabel")
+
+Doomspire.Name = "Doomspire"
+Doomspire.Parent = reflexpog
+Doomspire.BackgroundColor3 = Color3.fromRGB(47, 45, 47)
+Doomspire.BorderSizePixel = 0
+Doomspire.Position = UDim2.new(0.223804682, 0, 0.0166944899, 0)
+Doomspire.Size = UDim2.new(0, 148, 0, 32)
+Doomspire.Visible = false
+
+Framey_Doom.Name = "Framey_Doom"
+Framey_Doom.Parent = Doomspire
+Framey_Doom.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+Framey_Doom.BackgroundTransparency = 0.100
+Framey_Doom.BorderSizePixel = 0
+Framey_Doom.Position = UDim2.new(-0.000213107545, 0, 0.987113953, 0)
+Framey_Doom.Size = UDim2.new(0, 148, 0, 268)
+
+yellow.Name = "yellow"
+yellow.Parent = Framey_Doom
+yellow.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
+yellow.BorderSizePixel = 0
+yellow.Position = UDim2.new(0, 0, 0.0100684762, 0)
+yellow.Size = UDim2.new(0, 148, 0, 28)
+yellow.Font = Enum.Font.Cartoon
+yellow.Text = "Teleport Yellow"
+yellow.TextColor3 = Color3.fromRGB(255, 255, 255)
+yellow.TextScaled = true
+yellow.TextSize = 14.000
+yellow.TextWrapped = true
+
+blue.Name = "blue"
+blue.Parent = Framey_Doom
+blue.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
+blue.BorderSizePixel = 0
+blue.Position = UDim2.new(0, 0, 0.133202806, 0)
+blue.Size = UDim2.new(0, 148, 0, 28)
+blue.Font = Enum.Font.Cartoon
+blue.Text = "Teleport Blue"
+blue.TextColor3 = Color3.fromRGB(255, 255, 255)
+blue.TextScaled = true
+blue.TextSize = 14.000
+blue.TextWrapped = true
+
+drop.Name = "drop"
+drop.Parent = Framey_Doom
+drop.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
+drop.BorderSizePixel = 0
+drop.Position = UDim2.new(0, 0, 0.547381938, 0)
+drop.Size = UDim2.new(0, 148, 0, 28)
+drop.Font = Enum.Font.Cartoon
+drop.Text = "Drop Hats"
+drop.TextColor3 = Color3.fromRGB(255, 255, 255)
+drop.TextScaled = true
+drop.TextSize = 14.000
+drop.TextWrapped = true
+
+red.Name = "red"
+red.Parent = Framey_Doom
+red.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
+red.BorderSizePixel = 0
+red.Position = UDim2.new(0, 0, 0.260068476, 0)
+red.Size = UDim2.new(0, 148, 0, 28)
+red.Font = Enum.Font.Cartoon
+red.Text = "Teleport Red"
+red.TextColor3 = Color3.fromRGB(255, 255, 255)
+red.TextScaled = true
+red.TextSize = 14.000
+red.TextWrapped = true
+
+green.Name = "green"
+green.Parent = Framey_Doom
+green.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
+green.BorderSizePixel = 0
+green.Position = UDim2.new(0, 0, 0.390665472, 0)
+green.Size = UDim2.new(0, 148, 0, 28)
+green.Font = Enum.Font.Cartoon
+green.Text = "Teleport Green"
+green.TextColor3 = Color3.fromRGB(255, 255, 255)
+green.TextScaled = true
+green.TextSize = 14.000
+green.TextWrapped = true
+
+antivoid.Name = "antivoid"
+antivoid.Parent = Framey_Doom
+antivoid.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
+antivoid.BorderSizePixel = 0
+antivoid.Position = UDim2.new(0, 0, 0.674247622, 0)
+antivoid.Size = UDim2.new(0, 148, 0, 28)
+antivoid.Font = Enum.Font.Cartoon
+antivoid.Text = "Anti Void"
+antivoid.TextColor3 = Color3.fromRGB(255, 255, 255)
+antivoid.TextScaled = true
+antivoid.TextSize = 14.000
+antivoid.TextWrapped = true
+
+TextLabel_Doom.Parent = Doomspire
+TextLabel_Doom.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_Doom.BackgroundTransparency = 1.000
+TextLabel_Doom.BorderSizePixel = 0
+TextLabel_Doom.Position = UDim2.new(-0.0202702694, 0, 0, 0)
+TextLabel_Doom.Size = UDim2.new(0, 151, 0, 32)
+TextLabel_Doom.Font = Enum.Font.Cartoon
+TextLabel_Doom.Text = "Game Specific"
+TextLabel_Doom.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_Doom.TextScaled = true
+TextLabel_Doom.TextSize = 14.000
+TextLabel_Doom.TextWrapped = true
 
 
 function randomString()
@@ -783,20 +899,63 @@ aimtrainerbotenabled = false
 alreadyshownbot = false
 
 aimtrainerbot.MouseButton1Click:Connect(function()
-		reflexpog.Enabled = not reflexpog.Enabled
-		aimtrainerbotenabled = not aimtrainerbotenabled
-if aimtrainerbotenabled then
-			if alreadyshownbot then
-				-- no
-				else
-				alreadyshownbot = true
-				game.StarterGui:SetCore("SendNotification", {Title="Reflex"; Text="Aim Trainer Bot has been enabled"; Duration=3;})
-game.StarterGui:SetCore("SendNotification", {Title="Reflex"; Text="Press the = key to disable the bot and to show the gui again."; Duration=3;})
-				end
-			end
-		end)
+	reflexpog.Enabled = not reflexpog.Enabled
+	aimtrainerbotenabled = not aimtrainerbotenabled
+	if aimtrainerbotenabled then
+		if alreadyshownbot then
+			-- no
+		else
+			alreadyshownbot = true
+			game.StarterGui:SetCore("SendNotification", {Title="Reflex"; Text="Aim Trainer Bot has been enabled"; Duration=3;})
+			game.StarterGui:SetCore("SendNotification", {Title="Reflex"; Text="Press the = key to disable the bot and to show the gui again."; Duration=3;})
+		end
+	end
+end)
 
+drop.MouseButton1Click:Connect(function()
+	game:GetService("ReplicatedStorage")["GFink's Resources"].DropHats:FireServer()
+end)
 
+blue.MouseButton1Click:Connect(function()
+	game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-0.22933344542980194, 24.80004119873047, 130.18260192871094));
+end)
+
+red.MouseButton1Click:Connect(function()
+	game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-130.4550018310547, 24.800018310546875, -0.757850170135498));
+end)
+
+yellow.MouseButton1Click:Connect(function()
+	game.Players.LocalPlayer.Character:MoveTo(Vector3.new(130.572265625, 24.800003051757812, -0.1913135051727295));
+end)
+
+green.MouseButton1Click:Connect(function()
+	game.Players.LocalPlayer.Character:MoveTo(Vector3.new(1.4229203462600708, 24.80004119873047, -130.97067260742188));
+end)
+
+antivoidenabled = false
+coolname2 = nil
+antivoid.MouseButton1Click:Connect(function()
+	if antivoidenabled then
+		antivoidenabled = false
+		if char:FindFirstChild(coolname2) then
+			char:FindFirstChild(coolname2):Destroy()
+		else
+		end
+	else
+		antivoidenabled = true
+		char = plr.Character
+		ok = Instance.new("Part")
+		coolname2 = randomString()
+		ok.Name = coolname2
+		ok.Transparency = 0.9
+		ok.Color = Color3.new(0, 0.0431373, 0.898039)
+		ok.CanCollide = true
+		ok.Size = Vector3.new(1000, 1, 1000)
+		ok.Parent = char
+		ok.Anchored = true
+		ok.Position = Vector3.new(-151.344, -0.19996, 8.77636)
+	end
+	end)
 --print("got past gui variables")
 
 -- define other values
@@ -1042,7 +1201,7 @@ end)
 
 TextButton_11.MouseButton1Click:Connect(function()
 	workspace.Remote.TeamEvent:FireServer("Bright blue")
-		wait()
+	wait()
 	workspace.Remote.loadchar:InvokeServer()
 	wait(.1)
 	for i,v in pairs(game.Players.LocalPlayer.Backpack:GetDescendants()) do
@@ -1103,17 +1262,17 @@ end)
 hitboxes = false
 
 TextButton_16.MouseButton1Click:Connect(function()
-for i,v in pairs(game.Players:GetChildren()) do
-	if v.Character and v ~= game.Players.LocalPlayer then
+	for i,v in pairs(game.Players:GetChildren()) do
+		if v.Character and v ~= game.Players.LocalPlayer then
 			for e,a in pairs(v.Character:GetChildren()) do
-					if a:IsA("Part") or a:IsA("MeshPart") then
-						loll = Instance.new("SelectionBox")
-						loll.Parent = a
-						loll.Adornee = a
-						end
-					end
-		end
+				if a:IsA("Part") or a:IsA("MeshPart") then
+					loll = Instance.new("SelectionBox")
+					loll.Parent = a
+					loll.Adornee = a
+				end
 			end
+		end
+	end
 end)
 
 
@@ -1136,12 +1295,12 @@ end)
 skywarsdisabler = false
 
 TextButton_22.MouseButton1Click:Connect(function()
-    wait()
-for i,v in pairs(game.Players.LocalPlayer.PlayerGui.Extra:GetChildren()) do
-if v.Name == "Local" then
-    v:Destroy()
-    end
+	wait()
+	for i,v in pairs(game.Players.LocalPlayer.PlayerGui.Extra:GetChildren()) do
+		if v.Name == "Local" then
+			v:Destroy()
 		end
+	end
 	skywarsdisabler = true
 end)
 
@@ -1188,76 +1347,77 @@ whizzall.MouseButton1Click:Connect(function()
 end)
 SilentAim = false
 AimPart = "Random"
- 
-	local CurrentCamera = workspace.CurrentCamera
-	local Players = game:GetService("Players")
-	local LocalPlayer = Players.LocalPlayer
-	local Mouse = LocalPlayer:GetMouse()
-	function ClosestPlayer()
-		local MaxDist, Closest = math.huge
-		for i,v in pairs(Players:GetChildren()) do
-			if v ~= LocalPlayer and v.Character then
-				local Head = v.Character.FindFirstChild(v.Character, "Head")
-				if Head then 
-					local Pos, Vis = CurrentCamera.WorldToScreenPoint(CurrentCamera, Head.Position)
-					if Vis then
-						local MousePos, TheirPos = Vector2.new(Mouse.X, Mouse.Y), Vector2.new(Pos.X, Pos.Y)
-						local Dist = (TheirPos - MousePos).Magnitude
-						if Dist < MaxDist then
-							MaxDist = Dist
-							Closest = v
-						end
+
+local CurrentCamera = workspace.CurrentCamera
+local Players = game:GetService("Players")
+local LocalPlayer = Players.LocalPlayer
+local Mouse = LocalPlayer:GetMouse()
+function ClosestPlayer()
+	local MaxDist, Closest = math.huge
+	for i,v in pairs(Players:GetChildren()) do
+		if v ~= LocalPlayer and v.Character then
+			local Head = v.Character.FindFirstChild(v.Character, "Head")
+			if Head then 
+				local Pos, Vis = CurrentCamera.WorldToScreenPoint(CurrentCamera, Head.Position)
+				if Vis then
+					local MousePos, TheirPos = Vector2.new(Mouse.X, Mouse.Y), Vector2.new(Pos.X, Pos.Y)
+					local Dist = (TheirPos - MousePos).Magnitude
+					if Dist < MaxDist then
+						MaxDist = Dist
+						Closest = v
 					end
 				end
 			end
 		end
-		return Closest
 	end
- 
-	function GetAimPart()
-		if AimPart == 'Head' then
+	return Closest
+end
+
+function GetAimPart()
+	if AimPart == 'Head' then
+		return 'Head'
+	end
+	if AimPart == 'LowerTorso' then
+		return 'LowerTorso'
+	end
+	if AimPart == 'Random' then
+		if math.random(1,3) == 1 then
 			return 'Head'
-		end
-		if AimPart == 'LowerTorso' then
+		else
 			return 'LowerTorso'
 		end
-		if AimPart == 'Random' then
-			if math.random(1,3) == 1 then
-				return 'Head'
-			else
-				return 'LowerTorso'
-			end
-		end
 	end
- 
-	silentaimboot.MouseButton1Click:Connect(function()
-		if SilentAim then
-			--issilentaim.BackgroundColor3 = Color3.new(255, 0, 0)
-			SilentAim = false
-			local mt = getrawmetatable(game)
-			local index = mt.__index
-			setreadonly(mt, false)
-			mt.__namecall = namecallold
-		else
-			--issilentaim.BackgroundColor3 = Color3.new(0, 255, 0)
-			SilentAim = true
-			local mt = getrawmetatable(game)
-			local index = mt.__index
-			setreadonly(mt, false)
-			mt.__namecall = newcclosure(function(self, ...)
-				local Args = {...}
-				NamecallMethod = getnamecallmethod()
-				if NamecallMethod == "FindPartOnRayWithIgnoreList" then
-					local CP = ClosestPlayer()
-					if CP and CP.Character and CP.Character.FindFirstChild(CP.Character, GetAimPart()) then
-						Args[1] = Ray.new(CurrentCamera.CFrame.Position, (CP.Character[GetAimPart()].Position - CurrentCamera.CFrame.Position).Unit * 1000)
-						return namecallold(self, unpack(Args))
-					end
+end
+
+CurrentCamera = workspace.CurrentCamera
+silentaimboot.MouseButton1Click:Connect(function()
+	if SilentAim then
+		--issilentaim.BackgroundColor3 = Color3.new(255, 0, 0)
+		SilentAim = false
+		local mt = getrawmetatable(game)
+		local index = mt.__index
+		setreadonly(mt, false)
+		mt.__namecall = namecallold
+	else
+		--issilentaim.BackgroundColor3 = Color3.new(0, 255, 0)
+		SilentAim = true
+		local mt = getrawmetatable(game)
+		local index = mt.__index
+		setreadonly(mt, false)
+		mt.__namecall = newcclosure(function(self, ...)
+			local Args = {...}
+			NamecallMethod = getnamecallmethod()
+			if NamecallMethod == "FindPartOnRayWithIgnoreList" then
+				local CP = ClosestPlayer()
+				if CP and CP.Character and CP.Character.FindFirstChild(CP.Character, GetAimPart()) then
+					Args[1] = Ray.new(CurrentCamera.CFrame.Position, (CP.Character[GetAimPart()].Position - CurrentCamera.CFrame.Position).Unit * 1000)
+					return namecallold(self, unpack(Args))
 				end
-				return namecallold(self, ...)
-			end)
-		end
-	end)
+			end
+			return namecallold(self, ...)
+		end)
+	end
+end)
 
 
 
@@ -1294,8 +1454,10 @@ elseif game.PlaceId == 47324 then
 elseif game.PlaceId == 487316 then
 	SFOTH.Visible = true
 	TextButton_6.Visible = false
-	elseif game.PlaceId == 4894081134 then
+elseif game.PlaceId == 4894081134 then
 	AimTrainer.Visible = true
+elseif game.PlaceId == 1215581239 then
+	Doomspire.Visible = true
 end
 
 if game.ReplicatedStorage:FindFirstChild("RBXGuiHandler") then
@@ -1307,9 +1469,9 @@ end
 mouse.KeyDown:Connect(function(lol)
 	if lol == "=" then
 		reflexpog.Enabled = not reflexpog.Enabled
-			if aimtrainerbotenabled then
-				aimtrainerbotenabled = false
-				end
+		if aimtrainerbotenabled then
+			aimtrainerbotenabled = false
+		end
 	end
 end)
 
@@ -1374,13 +1536,13 @@ CC = workspace.CurrentCamera
 while wait() do
 	if aimtrainerbotenabled then
 		wait(.1)
-		   for i,v in pairs(workspace:GetChildren()) do
-        if v.Name == "Target" then
-CC.CoordinateFrame = CFrame.new(CC.CoordinateFrame.p, v.CFrame.p)
-mouse1click()
-end
-end
+		for i,v in pairs(workspace:GetChildren()) do
+			if v.Name == "Target" then
+				CC.CoordinateFrame = CFrame.new(CC.CoordinateFrame.p, v.CFrame.p)
+				mouse1click()
+			end
 		end
+	end
 	if esp then
 		wait(.1)
 		for i,v in pairs (game:GetService("Players"):GetPlayers()) do
@@ -1400,16 +1562,16 @@ end
 		end
 	end
 	if skywarsdisabler then
-	    wait()
-	    if game.Players.LocalPlayer.PlayerGui.Extra then
-	for i,v in pairs(game.Players.LocalPlayer.PlayerGui.Extra:GetChildren()) do
-	    wait()
-if v.Name == "Local" then
-    v:Destroy()
-    end
+		wait()
+		if game.Players.LocalPlayer.PlayerGui.Extra then
+			for i,v in pairs(game.Players.LocalPlayer.PlayerGui.Extra:GetChildren()) do
+				wait()
+				if v.Name == "Local" then
+					v:Destroy()
+				end
+			end
+		else
+			-- no
 		end
-	else
-		-- no
-	    end
-end
+	end
 end
