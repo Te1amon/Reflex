@@ -1502,7 +1502,9 @@ game:GetService("RunService").RenderStepped:Connect(function()
 					if triggerdebounce then
 						-- no
 					else
-						mouse1click()
+						mouse1press()
+						wait(.1)
+						mouse1release()
 					end
 				else
 					-- bruh
