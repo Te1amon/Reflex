@@ -1494,7 +1494,7 @@ game:GetService("RunService").RenderStepped:Connect(function()
 		end
 	end
 	if triggerbot then
-		wait(math.random(0.1, 0.2))
+		wait(math.random(0.15, 0.3))
 		mouse = game.Players.LocalPlayer:GetMouse()
 		if mouse.Target ~= nil and mouse.Target ~= workspace then
 			if mouse.Target.Parent:FindFirstChildOfClass("Humanoid") then
