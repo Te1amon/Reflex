@@ -1324,7 +1324,7 @@ triggerboot.MouseButton1Click:Connect(function()
 end)
 
 nohead.MouseButton1Click:Connect(function()
-	char = game.Players.LocalPlayer
+	char = game.Players.LocalPlayer.Character
 	if char:FindFirstChild("FakeHead") then
 		char.FakeHead:Destroy()
 	else
