@@ -1323,13 +1323,9 @@ triggerboot.MouseButton1Click:Connect(function()
 	triggerbot = not triggerbot
 end)
 
+noheadtoggle = false
 nohead.MouseButton1Click:Connect(function()
-	char = game.Players.LocalPlayer.Character
-	if char:FindFirstChild("FakeHead") then
-		char.FakeHead:Destroy()
-	else
-
-	end
+noheadtoggle = not noheadtoggle
 end)
 
 coolify.MouseButton1Click:Connect(function()
@@ -1536,6 +1532,14 @@ end)
 CC = workspace.CurrentCamera
 
 while wait() do
+	if noheadtoggle then
+			char = game.Players.LocalPlayer.Character
+	if char:FindFirstChild("FakeHead") then
+		char.FakeHead:Destroy()
+	else
+
+	end
+		end
 	if aimtrainerbotenabled then
 		wait(.1)
 		for i,v in pairs(workspace:GetChildren()) do
