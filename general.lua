@@ -1496,7 +1496,7 @@ game:GetService("RunService").RenderStepped:Connect(function()
 			if v ~= game.Players.LocalPlayer then
 				charr = v.Character
 				if charr then
-					charr.Head.Size = Vector3.new(2, 2, 2)
+					charr.Head.Size = Vector3.new(3, 3, 3)
 					end
 				end
 			end
