@@ -877,7 +877,7 @@ silentaimboot_2.BorderSizePixel = 0
 silentaimboot_2.Position = UDim2.new(0, 0, 0.260068476, 0)
 silentaimboot_2.Size = UDim2.new(0, 148, 0, 28)
 silentaimboot_2.Font = Enum.Font.Cartoon
-silentaimboot_2.Text = "Killaura"
+silentaimboot_2.Text = "Bigger Heads"
 silentaimboot_2.TextColor3 = Color3.fromRGB(255, 255, 255)
 silentaimboot_2.TextScaled = true
 silentaimboot_2.TextSize = 14.000
@@ -1333,8 +1333,9 @@ coolify.MouseButton1Click:Connect(function()
 end)
 
 akillaura = false
+hitboxhead = false
 silentaimboot_2.MouseButton1Click:Connect(function()
-	--akillaura = not akillaura
+	hitboxhead = not hitboxhead
 end)
 
 whizzy = false
@@ -1532,6 +1533,17 @@ end)
 CC = workspace.CurrentCamera
 
 while wait() do
+	if hitboxhead then
+		char = game.Players.LocalPlayer.Character
+		for i,v in pairs(game.Players:GetChildren()) do
+			if v ~= game.Players.LocalPlayer then
+				charr = v.Character
+				if charr then
+					charr.Head.Size = Vector3.new(2, 2, 2)
+					end
+				end
+			end
+		end
 	if noheadtoggle then
 			char = game.Players.LocalPlayer.Character
 	if char:FindFirstChild("FakeHead") then
