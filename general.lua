@@ -1490,6 +1490,17 @@ game:GetService("RunService").RenderStepped:Connect(function()
 			game.ReplicatedStorage.Events.Whizz:FireServer(v)
 		end
 	end
+			if hitboxhead then
+		char = game.Players.LocalPlayer.Character
+		for i,v in pairs(game.Players:GetChildren()) do
+			if v ~= game.Players.LocalPlayer then
+				charr = v.Character
+				if charr then
+					charr.Head.Size = Vector3.new(2, 2, 2)
+					end
+				end
+			end
+		end
 	if triggerbot then
 		wait(math.random(0.15, 0.3))
 		mouse = game.Players.LocalPlayer:GetMouse()
@@ -1533,17 +1544,6 @@ end)
 CC = workspace.CurrentCamera
 
 while wait() do
-	if hitboxhead then
-		char = game.Players.LocalPlayer.Character
-		for i,v in pairs(game.Players:GetChildren()) do
-			if v ~= game.Players.LocalPlayer then
-				charr = v.Character
-				if charr then
-					charr.Head.Size = Vector3.new(2, 2, 2)
-					end
-				end
-			end
-		end
 	if noheadtoggle then
 			char = game.Players.LocalPlayer.Character
 	if char:FindFirstChild("FakeHead") then
