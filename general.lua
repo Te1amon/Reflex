@@ -4,6 +4,12 @@
 -- Also some snippets of code are from Infinite Yield, thanks to them!
 -- Infinite Yield: https://infinite.yiff.gg/
 
+--getgenv().InternalUI
+--getgenv().Reflex_External
+
+if getgenv().SelfDestuctCompleted then
+	-- dont run!
+else
 local reflexpog = Instance.new("ScreenGui")
 local Movement = Instance.new("Frame")
 local Framey = Instance.new("Frame")
@@ -1479,7 +1485,7 @@ mouse.KeyDown:Connect(function(lol)
 					-- no
 				end
 				else
-				reflexpog.Enabled = not reflexpog.Enabled
+			reflexpog.Enabled = not reflexpog.Enabled
 			if aimtrainerbotenabled then
 			aimtrainerbotenabled = false
 		end
@@ -1521,6 +1527,7 @@ if getgenv().Reflex_External then
 			end
 		end
 		reflexpog:Destroy()
+		getgenv().SelfDestuctCompleted = true
 		-- frfr
 		end
 	else
@@ -1529,6 +1536,9 @@ if getgenv().Reflex_External then
 
 game:GetService("RunService").RenderStepped:Connect(function()
 	wait()
+		if getgenv().SelfDestuctCompleted then
+				-- dont run!
+				else
 	if whizzy then
 		wait(.1)
 		pogtable = game.Players:GetChildren()
@@ -1587,11 +1597,15 @@ game:GetService("RunService").RenderStepped:Connect(function()
 			end
 		end
 	end
+				end
 end)
 
 CC = workspace.CurrentCamera
 
 while wait() do
+		if getgenv().SelfDestuctCompleted then
+			-- dont run
+			else
 	if noheadtoggle then
 			char = game.Players.LocalPlayer.Character
 	if char:FindFirstChild("FakeHead") then
@@ -1641,3 +1655,5 @@ while wait() do
 		end
 	end
 end
+	end
+	end
