@@ -961,8 +961,12 @@ antivoid.MouseButton1Click:Connect(function()
 -- define other values
 coolaid = 158118263
 
+if getgenv().Reflex_External then
+	-- hide
+	else
 game.StarterGui:SetCore("SendNotification", {Title="Reflex"; Text="Thank you for using Reflex!"; Duration=2;})
 game.StarterGui:SetCore("SendNotification", {Title="Reflex"; Text="Press the =  key to toggle gui visibility"; Duration=3;})
+	end
 
 reflexpog.Enabled = false
 
@@ -1465,10 +1469,21 @@ end
 
 mouse.KeyDown:Connect(function(lol)
 	if lol == "=" then
-		reflexpog.Enabled = not reflexpog.Enabled
-		if aimtrainerbotenabled then
+			if then getgenv().Reflex_External then
+				if getgenv().InternalUI then
+			reflexpog.Enabled = not reflexpog.Enabled
+			if aimtrainerbotenabled then
 			aimtrainerbotenabled = false
 		end
+					else
+					-- no
+				end
+				else
+				reflexpog.Enabled = not reflexpog.Enabled
+			if aimtrainerbotenabled then
+			aimtrainerbotenabled = false
+		end
+				end
 	end
 end)
 
@@ -1503,7 +1518,7 @@ game:GetService("RunService").RenderStepped:Connect(function()
 			end
 		end
 	if triggerbot then
-		wait(math.random(0.15, 0.3))
+		wait(math.random(0.15, 0.2))
 		mouse = game.Players.LocalPlayer:GetMouse()
 		if mouse.Target ~= nil and mouse.Target ~= workspace then
 			if mouse.Target.Parent:FindFirstChildOfClass("Humanoid") then
