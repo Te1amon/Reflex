@@ -1,4 +1,4 @@
--- Scripted and designed by Te1amon (WebMario)
+-- Scripted and designed by Te1amon
 -- I don't mind if you use my code, as long as you give credit to me :)
 
 -- Also some snippets of code are from Infinite Yield, thanks to them!
@@ -7,7 +7,7 @@
 --getgenv().InternalUI
 --getgenv().Reflex_External
 
-if getgenv().SelfDestuctCompleted then
+if getgenv().SelfDestructCompleted then
 	-- dont run!
 else
 local reflexpog = Instance.new("ScreenGui")
@@ -1527,7 +1527,7 @@ if getgenv().Reflex_External then
 			end
 		end
 		reflexpog:Destroy()
-		getgenv().SelfDestuctCompleted = true
+		getgenv().SelfDestructCompleted = true
 		-- frfr
 		end
 	else
@@ -1536,7 +1536,7 @@ if getgenv().Reflex_External then
 
 game:GetService("RunService").RenderStepped:Connect(function()
 	wait()
-		if getgenv().SelfDestuctCompleted then
+		if getgenv().SelfDestructCompleted then
 				-- dont run!
 				else
 	if whizzy then
@@ -1603,7 +1603,7 @@ end)
 CC = workspace.CurrentCamera
 
 while wait() do
-		if getgenv().SelfDestuctCompleted then
+		if getgenv().SelfDestructCompleted then
 			-- dont run
 			else
 	if noheadtoggle then
