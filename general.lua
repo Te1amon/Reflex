@@ -1469,7 +1469,7 @@ end
 
 mouse.KeyDown:Connect(function(lol)
 	if lol == "=" then
-			if then getgenv().Reflex_External then
+			if getgenv().Reflex_External then
 				if getgenv().InternalUI then
 			reflexpog.Enabled = not reflexpog.Enabled
 			if aimtrainerbotenabled then
@@ -1494,6 +1494,38 @@ allweapons.MouseButton1Click:Connect(function()
 end)
 
 triggerdebounce = false
+
+if getgenv().Reflex_External then
+	getgenv().SelfDestruct = function()
+		triggerbot = false
+		whizzy = false
+		hitboxhead = false
+		akillaura = false
+		killaura = false
+		noheadtoggle = false
+		aimtrainerbotenabled = false
+		esp = false
+		for i,v in pairs(workspace:GetDescendants()) do
+			if v.Name == "pogpog" or v.Name == "chamcham" then
+				v:Destroy()
+			else
+
+			end
+		end
+		wait()
+		for i,v in pairs(workspace:GetDescendants()) do
+			if v.Name == "pogpog" or v.Name == "chamcham" then
+				v:Destroy()
+			else
+
+			end
+		end
+		reflexpog:Destroy()
+		-- frfr
+		end
+	else
+	-- bruh
+	end
 
 game:GetService("RunService").RenderStepped:Connect(function()
 	wait()
