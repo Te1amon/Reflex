@@ -986,6 +986,9 @@ end)
 TextButton_2.MouseButton1Click:Connect(function()
 	troll = tonumber(jumpbox.Text)
 	if game.Players.LocalPlayer.Character then
+				if game.Players.LocalPlayer.Character.Humanoid.UseJumpPower then
+					game.Players.LocalPlayer.Character.Humanoid.UseJumpPower = true
+					end
 		game.Players.LocalPlayer.Character.Humanoid.JumpPower = troll
 	end
 end)
