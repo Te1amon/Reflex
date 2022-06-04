@@ -1355,78 +1355,78 @@ whizzy = false
 whizzall.MouseButton1Click:Connect(function()
 	whizzy = not whizzy
 end)
-SilentAim = false
-AimPart = "Random"
+_G.SilentAim = false
+	_G.AimPart = "Random"
 
-local CurrentCamera = workspace.CurrentCamera
-local Players = game:GetService("Players")
-local LocalPlayer = Players.LocalPlayer
-local Mouse = LocalPlayer:GetMouse()
-function ClosestPlayer()
-	local MaxDist, Closest = math.huge
-	for i,v in pairs(Players:GetChildren()) do
-		if v ~= LocalPlayer and v.Character then
-			local Head = v.Character.FindFirstChild(v.Character, "Head")
-			if Head then 
-				local Pos, Vis = CurrentCamera.WorldToScreenPoint(CurrentCamera, Head.Position)
-				if Vis then
-					local MousePos, TheirPos = Vector2.new(Mouse.X, Mouse.Y), Vector2.new(Pos.X, Pos.Y)
-					local Dist = (TheirPos - MousePos).Magnitude
-					if Dist < MaxDist then
-						MaxDist = Dist
-						Closest = v
+	local CurrentCamera = workspace.CurrentCamera
+	local Players = game:GetService("Players")
+	local LocalPlayer = Players.LocalPlayer
+	local Mouse = LocalPlayer:GetMouse()
+	function ClosestPlayer()
+		local MaxDist, Closest = math.huge
+		for i,v in pairs(Players.GetPlayers(Players)) do
+			if v ~= LocalPlayer and v.Character then
+				local Head = v.Character.FindFirstChild(v.Character, "Head")
+				if Head then 
+					local Pos, Vis = CurrentCamera.WorldToScreenPoint(CurrentCamera, Head.Position)
+					if Vis then
+						local MousePos, TheirPos = Vector2.new(Mouse.X, Mouse.Y), Vector2.new(Pos.X, Pos.Y)
+						local Dist = (TheirPos - MousePos).Magnitude
+						if Dist < MaxDist then
+							MaxDist = Dist
+							Closest = v
+						end
 					end
 				end
 			end
 		end
+		return Closest
 	end
-	return Closest
-end
 
-function GetAimPart()
-	if AimPart == 'Head' then
-		return 'Head'
-	end
-	if AimPart == 'LowerTorso' then
-		return 'LowerTorso'
-	end
-	if AimPart == 'Random' then
-		if math.random(1,3) == 1 then
+	function GetAimPart()
+		if _G.AimPart == 'Head' then
 			return 'Head'
-		else
+		end
+		if _G.AimPart == 'LowerTorso' then
 			return 'LowerTorso'
 		end
+		if _G.AimPart == 'Random' then
+			if math.random(1,4) == 1 then
+				return 'Head'
+			else
+				return 'LowerTorso'
+			end
+		end
 	end
-end
 
 CurrentCamera = workspace.CurrentCamera
 silentaimboot.MouseButton1Click:Connect(function()
-	if SilentAim then
-		--issilentaim.BackgroundColor3 = Color3.new(255, 0, 0)
-		SilentAim = false
-		local mt = getrawmetatable(game)
-		local index = mt.__index
-		setreadonly(mt, false)
-		mt.__namecall = namecallold
-	else
-		--issilentaim.BackgroundColor3 = Color3.new(0, 255, 0)
-		SilentAim = true
-		local mt = getrawmetatable(game)
-		local index = mt.__index
-		setreadonly(mt, false)
-		mt.__namecall = newcclosure(function(self, ...)
-			local Args = {...}
-			NamecallMethod = getnamecallmethod()
-			if NamecallMethod == "FindPartOnRayWithIgnoreList" then
-				local CP = ClosestPlayer()
-				if CP and CP.Character and CP.Character.FindFirstChild(CP.Character, GetAimPart()) then
-					Args[1] = Ray.new(CurrentCamera.CFrame.Position, (CP.Character[GetAimPart()].Position - CurrentCamera.CFrame.Position).Unit * 1000)
-					return namecallold(self, unpack(Args))
+if _G.SilentAim then
+			--issilentaim.BackgroundColor3 = Color3.new(255, 0, 0)
+			_G.SilentAim = false
+			local mt = getrawmetatable(game)
+			local index = mt.__index
+			setreadonly(mt, false)
+			mt.__namecall = namecallold
+		else
+			--issilentaim.BackgroundColor3 = Color3.new(0, 255, 0)
+			_G.SilentAim = true
+			local mt = getrawmetatable(game)
+			local index = mt.__index
+			setreadonly(mt, false)
+			mt.__namecall = newcclosure(function(self, ...)
+				local Args = {...}
+				NamecallMethod = getnamecallmethod()
+				if NamecallMethod == "FindPartOnRayWithIgnoreList" then
+					local CP = ClosestPlayer()
+					if CP and CP.Character and CP.Character.FindFirstChild(CP.Character, GetAimPart()) then
+						Args[1] = Ray.new(CurrentCamera.CFrame.Position, (CP.Character[GetAimPart()].Position - CurrentCamera.CFrame.Position).Unit * 1000)
+						return namecallold(self, unpack(Args))
+					end
 				end
-			end
-			return namecallold(self, ...)
-		end)
-	end
+				return namecallold(self, ...)
+			end)
+		end
 end)
 
 
