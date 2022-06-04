@@ -1355,6 +1355,11 @@ whizzy = false
 whizzall.MouseButton1Click:Connect(function()
 	whizzy = not whizzy
 end)
+	
+	local mt = getrawmetatable(game)
+	local namecallold = mt.__namecall
+	local index = mt.__index
+	
 _G.SilentAim = false
 	_G.AimPart = "Random"
 
