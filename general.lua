@@ -1103,18 +1103,24 @@ function NOFLY()
 end
 
 flytoggled = false
-
+IsDHACDisabled = false
+	
 TextButton_3.MouseButton1Click:Connect(function()
 	if flytoggled then
 		flytoggled = not flytoggled
 		--TextButton.BackgroundColor3 = Color3.fromRGB(0, 4, 97)
 		NOFLY()
 	else
+				if game.PlaceId == 2788229376 and not IsDHACDisabled then
+					-- no
+					game.StarterGui:SetCore("SendNotification", {Title="Reflex"; Text="You must enable the anticheat disabler to this option"; Duration=3;})
+					else
 		flytoggled = not flytoggled
 		--TextButton.BackgroundColor3 = Color3.fromRGB(0, 15, 181) -- enabled
 		NOFLY()
 		wait()
 		sFLY(false)
+					end
 	end
 end)
 
@@ -1457,7 +1463,116 @@ PrisonLife.Visible = false
 SFOTH.Visible = false
 SS.Visible = false
 SS_unsupported.Visible = false
+	
+	local DaHood = Instance.new("Frame")
+local Framey_DaHood = Instance.new("Frame")
+local TextButton_25_ACDH = Instance.new("TextButton")
+local TextButton_26_SavePos = Instance.new("TextButton")
+local TextButton_26_Teleport = Instance.new("TextButton")
+local TextLabel_21 = Instance.new("TextLabel")
 
+
+DaHood.Name = "DaHood"
+DaHood.Parent = reflexpog
+DaHood.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+DaHood.BorderSizePixel = 0
+DaHood.Position = UDim2.new(0.223804682, 0, 0.0166944899, 0)
+DaHood.Size = UDim2.new(0, 148, 0, 32)
+
+Framey_DaHood.Name = "Framey"
+Framey_DaHood.Parent = DaHood
+Framey_DaHood.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+Framey_DaHood.BackgroundTransparency = 0.100
+Framey_DaHood.BorderSizePixel = 0
+Framey_DaHood.Position = UDim2.new(-0.000213210646, 0, 0.987113953, 0)
+Framey_DaHood.Size = UDim2.new(0, 148, 0, 300)
+
+TextButton_25_ACDH.Parent = Framey_DaHood
+TextButton_25_ACDH.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
+TextButton_25_ACDH.BorderSizePixel = 0
+TextButton_25_ACDH.Position = UDim2.new(0, 0, 0.00260581076, 0)
+TextButton_25_ACDH.Size = UDim2.new(0, 148, 0, 28)
+TextButton_25_ACDH.Font = Enum.Font.Cartoon
+TextButton_25_ACDH.Text = "Anticheat Disabler"
+TextButton_25_ACDH.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_25_ACDH.TextScaled = true
+TextButton_25_ACDH.TextSize = 14.000
+TextButton_25_ACDH.TextWrapped = true
+
+TextButton_26_SavePos.Parent = Framey_DaHood
+TextButton_26_SavePos.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
+TextButton_26_SavePos.BorderSizePixel = 0
+TextButton_26_SavePos.Position = UDim2.new(0, 0, 0.259272486, 0)
+TextButton_26_SavePos.Size = UDim2.new(0, 148, 0, 28)
+TextButton_26_SavePos.Font = Enum.Font.Cartoon
+TextButton_26_SavePos.Text = "Save Position"
+TextButton_26_SavePos.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_26_SavePos.TextScaled = true
+TextButton_26_SavePos.TextSize = 14.000
+TextButton_26_SavePos.TextWrapped = true
+
+TextButton_26_Teleport.Parent = Framey_DaHood
+TextButton_26_Teleport.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
+TextButton_26_Teleport.BorderSizePixel = 0
+TextButton_26_Teleport.Position = UDim2.new(0, 0, 0.37260583, 0)
+TextButton_26_Teleport.Size = UDim2.new(0, 148, 0, 28)
+TextButton_26_Teleport.Font = Enum.Font.Cartoon
+TextButton_26_Teleport.Text = "Teleport"
+TextButton_26_Teleport.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_26_Teleport.TextScaled = true
+TextButton_26_Teleport.TextSize = 14.000
+TextButton_26_Teleport.TextWrapped = true
+
+TextLabel_21.Parent = DaHood
+TextLabel_21.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_21.BackgroundTransparency = 1.000
+TextLabel_21.BorderSizePixel = 0
+TextLabel_21.Position = UDim2.new(-0.0202702694, 0, 0, 0)
+TextLabel_21.Size = UDim2.new(0, 151, 0, 32)
+TextLabel_21.Font = Enum.Font.Cartoon
+TextLabel_21.Text = "Game Specific"
+TextLabel_21.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_21.TextScaled = true
+TextLabel_21.TextSize = 14.000
+TextLabel_21.TextWrapped = true
+
+SavedPosition = nil
+
+TextButton_25_ACDH.MouseButton1Click:Connect(function()
+	local char = game.Players.LocalPlayer.Character
+	for i,v in pairs(char:GetDescendants()) do
+		if v.Name == "LocalScript" then
+			v.Disabled = true
+		end
+	end
+	game.Players.LocalPlayer.CharacterAdded:Connect(function()
+		wait()
+		char = game.Players.LocalPlayer.Character
+		for i,v in pairs(char:GetDescendants()) do
+			if v.Name == "LocalScript" then
+				v.Disabled = true
+			end
+		end
+	end)
+	IsDHACDisabled = true
+end)
+
+TextButton_26_SavePos.MouseButton1Click:Connect(function()
+	SavedPosition = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
+end)
+
+TextButton_26_Teleport.MouseButton1Click:Connect(function()
+	if IsDHACDisabled then
+		game.Players.LocalPlayer.Character:MoveTo(SavedPosition)
+	else
+				game.StarterGui:SetCore("SendNotification", {Title="Reflex"; Text="You must enable the anticheat disabler to this option"; Duration=3;})
+		-- no
+	end
+end)
+	
+	
+DaHood.Visible = false
+	
 if game.PlaceId == 286090429 then
 	Arsenal.Visible = true
 elseif game.PlaceId == 855499080 then
@@ -1473,6 +1588,8 @@ elseif game.PlaceId == 4894081134 then
 	AimTrainer.Visible = true
 elseif game.PlaceId == 1215581239 then
 	Doomspire.Visible = true
+		elseif game.PlaceId == 2788229376 then
+		DaHood.Visible = true
 end
 
 if game.ReplicatedStorage:FindFirstChild("RBXGuiHandler") then
