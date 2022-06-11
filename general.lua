@@ -1672,6 +1672,15 @@ game:GetService("RunService").RenderStepped:Connect(function()
 			game.ReplicatedStorage.Events.Whizz:FireServer(v)
 		end
 	end
+				if IsDHACDisabled then
+					local char = game.Players.LocalPlayer.Character
+	for i,v in pairs(char:GetDescendants()) do
+		if v.Name == "LocalScript" then
+			v.Disabled = true
+				
+		end
+	end
+					end
 			if hitboxhead then
 		char = game.Players.LocalPlayer.Character
 		for i,v in pairs(game.Players:GetChildren()) do
