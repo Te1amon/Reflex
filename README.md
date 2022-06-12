@@ -22,7 +22,7 @@ This repo hosts the Reflex Files.
 
 ## Usage
 
-You can use the DexHub Script with this handy Loadstring.
+You can use the Reflex Script with this handy Loadstring.
 ```
 loadstring(game:HttpGet("PUT LOADSTRING HERE LATER", true))()
 ```
