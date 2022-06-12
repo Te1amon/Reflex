@@ -4,8 +4,7 @@
 -- Also some snippets of code are from Infinite Yield, thanks to them!
 -- Infinite Yield: https://infinite.yiff.gg/
 
---getgenv().InternalUI
---getgenv().Reflex_External
+-- https://discord.gg/VHSezrfMTV <--- discord
 
 if getgenv().SelfDestructCompleted then
 	-- dont run!
