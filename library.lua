@@ -1,7 +1,6 @@
--- This User Interface Library is brought to you by Solaris Software
--- modified by dex
+-- This User Interface Library is brought to you by Solaris Software.
 local Solaris = Instance.new("ScreenGui")
-Solaris.Name = "Reflex V2"
+Solaris.Name = "dosage's solaris gui"
 Solaris.Parent = game.CoreGui
 Solaris.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
@@ -154,7 +153,7 @@ local SolarisLib = {
         Theme = "Default",
         ShowFriendsOnLaunch = true,
         ShowMusicOnLaunch = false,
-        CloseBind = "RightShift"
+        CloseBind = "RightControl"
     },
     Flags = {},
     CurrentTab
@@ -163,8 +162,7 @@ local SolarisLib = {
 
 
 local MainUI = game:GetObjects("rbxassetid://7835727566")[1]
-print("Thanks for using Reflex! <3")
-print("dex was here")
+print("SolarisLib Loaded!")
 local function MakeDraggable(topbarobject, object) 
     pcall(function()
 		local dragging, dragInput, mousePos, framePos = false
@@ -617,7 +615,7 @@ function SolarisLib:New(Config)
         
         local general = Settings:Tab("General")
         general:ToggleSetting("Show Music On Launch", "Shows the music menu when you load Reflex", false, "ShowMusicOnLaunch")
-        general:BindSetting("Close Bind", "Hides/Shows the main window when pressed.", Enum.KeyCode.RightShift, "CloseBind")
+        general:BindSetting("Close Bind", "Hides/Shows the main window when pressed.", Enum.KeyCode.RightControl, "CloseBind")
         
         local appearance = Settings:Tab("Appearance")
         appearance:Dropdown("Theme", "The look of the user interface", {"Default", "Discord", "Red", "Green", "Blue"}, "Default", "Theme")
