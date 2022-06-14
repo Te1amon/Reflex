@@ -272,7 +272,7 @@ function SolarisLib:New(Config)
         local MusicFrame, MusicPreset = game:GetObjects("rbxassetid://7296373622")[1], game:GetObjects("rbxassetid://7296615234")[1]
         MusicFrame.Parent = Solaris
         MusicFrame.ZIndex = 5
-        MusicFrame.Visible = SolarisLib.Settings.ShowMusicOnLaunch
+        MusicFrame.Visible = false
         MusicFrame.Frame.Title.Text = "Not Playing"
         MusicFrame.Frame.Progress.ProgressFrame.Size = UDim2.new(0,0,1,0)
         MusicFrame.Frame.AddBtn.AutoButtonColor = false
