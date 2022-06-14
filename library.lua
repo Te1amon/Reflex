@@ -152,8 +152,8 @@ local SolarisLib = {
     Settings = {
         Theme = "Default",
         ShowFriendsOnLaunch = true,
-        --ShowMusicOnLaunch = false,
-        CloseBind = "RightShift"
+        ShowMusicOnLaunch = false,
+        CloseBind = "RightControl"
     },
     Flags = {},
     CurrentTab
@@ -272,7 +272,7 @@ function SolarisLib:New(Config)
         local MusicFrame, MusicPreset = game:GetObjects("rbxassetid://7296373622")[1], game:GetObjects("rbxassetid://7296615234")[1]
         MusicFrame.Parent = Solaris
         MusicFrame.ZIndex = 5
-        MusicFrame.Visible = false
+        MusicFrame.Visible = SolarisLib.Settings.ShowMusicOnLaunch
         MusicFrame.Frame.Title.Text = "Not Playing"
         MusicFrame.Frame.Progress.ProgressFrame.Size = UDim2.new(0,0,1,0)
         MusicFrame.Frame.AddBtn.AutoButtonColor = false
@@ -615,7 +615,7 @@ function SolarisLib:New(Config)
         
         local general = Settings:Tab("General")
         general:ToggleSetting("Show Music On Launch", "Shows the music menu when you load Reflex", true, "ShowMusicOnLaunch")
-        general:BindSetting("Close Bind", "Hides/Shows the main window when pressed.", Enum.KeyCode.RightShift, "CloseBind")
+        general:BindSetting("Close Bind", "Hides/Shows the main window when pressed.", Enum.KeyCode.RightControl, "CloseBind")
         
         local appearance = Settings:Tab("Appearance")
         appearance:Dropdown("Theme", "The look of the user interface", {"Default", "Discord", "Red", "Green", "Blue"}, "Default", "Theme")
