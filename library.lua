@@ -153,7 +153,7 @@ local SolarisLib = {
         Theme = "Default",
         ShowFriendsOnLaunch = true,
         ShowMusicOnLaunch = false,
-        CloseBind = "RightControl"
+        CloseBind = "RightShift"
     },
     Flags = {},
     CurrentTab
@@ -614,8 +614,8 @@ function SolarisLib:New(Config)
         end   
         
         local general = Settings:Tab("General")
-        general:ToggleSetting("Show Music On Launch", "Shows the music menu when you load Reflex", false, "ShowMusicOnLaunch")
-        general:BindSetting("Close Bind", "Hides/Shows the main window when pressed.", Enum.KeyCode.RightControl, "CloseBind")
+        general:ToggleSetting("Show Music On Launch", "Shows the music menu when you load Reflex", true, "ShowMusicOnLaunch")
+        general:BindSetting("Close Bind", "Hides/Shows the main window when pressed.", Enum.KeyCode.RightShift, "CloseBind")
         
         local appearance = Settings:Tab("Appearance")
         appearance:Dropdown("Theme", "The look of the user interface", {"Default", "Discord", "Red", "Green", "Blue"}, "Default", "Theme")
