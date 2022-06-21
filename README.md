@@ -4,7 +4,7 @@ Reflex
 
 <p align="center">
 <a target="_blank" href="https://discord.gg/Vccbsgtbw4">Discord</a> · 
-<a target="_blank" href="COMING SOON">Website</a>
+<a target="_blank" href="https://reflexscript.xyz/">Website</a>
 </p>
 
 <div align='center'>
