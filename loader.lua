@@ -1,4 +1,5 @@
 a = game:HttpGet("https://raw.githubusercontent.com/Te1amon/Reflex/main/"..game.PlaceId..".lua")
+print("a")
 wait()
 if a then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Te1amon/Reflex/main/"..game.PlaceId..".lua"))() -- load reflex for the supported game
