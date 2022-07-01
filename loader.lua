@@ -14,5 +14,7 @@ for i, v in pairs(supported) do
 if isgamesupported then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Te1amon/Reflex/main/"..game.PlaceId..".lua"))() -- load reflex for the supported game
 else
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Te1amon/Reflex/main/universal.lua"))() -- load the universal script
+    getgenv().reflexloaderdebugone = isgamesupported
+    getgenv().reflexloaderdebugtwo = game:HttpGet("https://raw.githubusercontent.com/Te1amon/Reflex/main/universal.lua")
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Te1amon/Reflex/main/universal.lua"))() -- load the universal scrip t
     end
