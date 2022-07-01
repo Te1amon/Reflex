@@ -24,7 +24,7 @@ This repo hosts the Reflex Files.
 
 You can use the Reflex Script with this handy Loadstring.
 ```
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Te1amon/Reflex/main/"..game.PlaceId..".lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Te1amon/Reflex/main/loader.lua"))()
 ```
 
 ## Developers
