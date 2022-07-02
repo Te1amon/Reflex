@@ -1,6 +1,7 @@
 -- made by dex
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Te1amon/Reflex/main/"..game.PlaceId..".lua"))() -- a
+-- had to revert because this broke
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Te1amon/Reflex/main/"..game.PlaceId..".lua"))()
 
 --[[
 local success, res = pcall(function()
