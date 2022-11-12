@@ -14,6 +14,8 @@ Solaris.Name = randomString()
 Solaris.Parent = game.CoreGui.RobloxGui
 Solaris.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
+getgenv().ReflexUI = Solaris
+
 local NotificationHolder = Instance.new("ScreenGui")
 NotificationHolder.Name = "notiHolder"
 NotificationHolder.Parent = game.CoreGui
